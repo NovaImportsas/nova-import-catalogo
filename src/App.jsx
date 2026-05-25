@@ -1242,6 +1242,11 @@ const ProductCard = ({ product, onClick }) => {
               DESTACADO
             </span>
           )}
+          {(product.type === 'bebe' || product.type === 'mascotas' || product.type === 'hogar') && product.featured && (
+            <span className="bg-stone-900 text-white px-2 py-1 text-[10px] f-archivo font-bold tracking-wider">
+              {product.type === 'bebe' ? 'BEBÉ' : product.type === 'mascotas' ? 'MASCOTAS' : 'HOGAR'}
+            </span>
+          )}
         </div>
         
         {/* Stock indicator */}
@@ -1266,8 +1271,10 @@ const ProductCard = ({ product, onClick }) => {
         <div className="flex items-center gap-2 text-[10px] f-archivo font-bold tracking-wider" style={{ color: C.muted }}>
           {product.type === 'arabe' ? (
             <span style={{ color: C.navy }}>{product.brand.toUpperCase()}</span>
-          ) : (
+          ) : product.type === 'inspirado' ? (
             <span style={{ color: C.orange }}>ÁMBAR PERFUMERÍA</span>
+          ) : (
+            <span style={{ color: C.orange }}>NOVA IMPORT</span>
           )}
           <span>·</span>
           <span>{product.family.toUpperCase()}</span>
@@ -1554,7 +1561,7 @@ const Catalog = ({ initialFilter = {}, onSelectProduct, title = 'Catálogo compl
         <div className="max-w-[1400px] mx-auto px-4 lg:px-8">
           <div className="f-mono mb-3" style={{ color: C.orange }}>EL CATÁLOGO</div>
           <h1 className="f-archivo font-black text-4xl lg:text-5xl mb-3">{title}</h1>
-          <p style={{ color: C.muted }}>{products.length} fragancias disponibles · Envío a toda Colombia</p>
+          <p style={{ color: C.muted }}>{products.length} {products.every(p => p.type === 'arabe' || p.type === 'inspirado') ? 'fragancias' : 'productos'} disponibles · Envío a toda Colombia</p>
         </div>
       </section>
       
@@ -1729,8 +1736,10 @@ const ProductDetail = ({ product, onBack, onAddToCart, onWhatsAppBuy, onSelectPr
                     <span style={{ color: C.navy }}>{product.brand.toUpperCase()}</span>
                     <span style={{ background: C.navy }} className="text-white px-2 py-0.5 text-[10px]">ÁRABE ORIGINAL</span>
                   </>
-                ) : (
+                ) : product.type === 'inspirado' ? (
                   <span style={{ background: C.orange }} className="text-white px-2 py-0.5 text-[10px]">ÁMBAR PERFUMERÍA</span>
+                ) : (
+                  <span style={{ background: C.orange }} className="text-white px-2 py-0.5 text-[10px]">NOVA IMPORT</span>
                 )}
                 <span style={{ color: C.muted }}>· {product.family}</span>
               </div>
