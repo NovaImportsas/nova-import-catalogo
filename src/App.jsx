@@ -1019,8 +1019,46 @@ const useWishlist = () => {
   return getWishlist();
 };
 
+// Comments (localStorage based)
+const COMMENTS_KEY = 'novaimport_comments';
+let commentsCache = null;
+let commentsListeners = [];
+const getAllComments = () => {
+  if (commentsCache !== null) return commentsCache;
+  try {
+    const raw = typeof window !== 'undefined' ? window.localStorage.getItem(COMMENTS_KEY) : null;
+    commentsCache = raw ? JSON.parse(raw) : {};
+  } catch (e) { commentsCache = {}; }
+  return commentsCache;
+};
+const getCommentsForProduct = (id) => (getAllComments()[id] || []);
+const addComment = (productId, { name, rating, text }) => {
+  const all = { ...getAllComments() };
+  const list = all[productId] ? [...all[productId]] : [];
+  list.unshift({
+    id: Date.now(),
+    name: (name || 'Anónimo').trim().slice(0, 60),
+    rating: Math.max(1, Math.min(5, Number(rating) || 5)),
+    text: (text || '').trim().slice(0, 600),
+    date: new Date().toISOString(),
+  });
+  all[productId] = list;
+  commentsCache = all;
+  try { window.localStorage.setItem(COMMENTS_KEY, JSON.stringify(all)); } catch (e) {}
+  commentsListeners.forEach(fn => fn(all));
+};
+const useComments = (productId) => {
+  const [, setTick] = useState(0);
+  useEffect(() => {
+    const listener = () => setTick(t => t + 1);
+    commentsListeners.push(listener);
+    return () => { commentsListeners = commentsListeners.filter(l => l !== listener); };
+  }, []);
+  return getCommentsForProduct(productId);
+};
+
 // E-commerce links — generate search URLs by product name
-const SHOPIFY_BASE = 'https://novaimport.myshopify.com'; // TODO: actualizar al dominio real
+const SHOPIFY_BASE = 'https://nova-import-7.myshopify.com';
 const MERCADOLIBRE_BASE = 'https://listado.mercadolibre.com.co';
 const buildSearchTerm = (product) => {
   const base = product.name.replace(/[·\u00b7\u2022]/g, '').replace(/\s+/g,' ').trim();
@@ -1155,6 +1193,8 @@ const Marquee = () => (
 // ============================================================
 const Header = ({ onNavigate, currentView, cartCount, onCartOpen }) => {
   const [open, setOpen] = useState(false);
+  const wishlist = useWishlist();
+  const wishlistCount = wishlist.length;
   const links = [
     { id: 'catalog-bebe', label: 'Bebé' },
     { id: 'catalog-mascotas', label: 'Mascotas' },
@@ -1206,6 +1246,14 @@ const Header = ({ onNavigate, currentView, cartCount, onCartOpen }) => {
             </button>
             <button onClick={() => onNavigate('account')} className="hidden sm:block">
               <User size={20} />
+            </button>
+            <button onClick={() => onNavigate('wishlist')} className="relative" title="Favoritos">
+              <Heart size={20} />
+              {wishlistCount > 0 && (
+                <span className="absolute -top-2 -right-2 text-white text-[10px] rounded-full w-5 h-5 flex items-center justify-center font-bold f-archivo" style={{ background: C.orange }}>
+                  {wishlistCount}
+                </span>
+              )}
             </button>
             <button onClick={onCartOpen} className="relative">
               <ShoppingBag size={20} />
@@ -1619,7 +1667,7 @@ const Catalog = ({ initialFilter = {}, onSelectProduct, title = 'Catálogo compl
       </section>
       
       {/* Filters */}
-      <section className="border-b sticky top-20 bg-white z-20" style={{ borderColor: '#E5E5E0' }}>
+      <section className="border-b bg-white" style={{ borderColor: '#E5E5E0' }}>
         <div className="max-w-[1400px] mx-auto px-4 lg:px-8 py-4 flex flex-wrap items-center gap-3">
           <div className="flex items-center gap-2 f-archivo text-xs font-bold mr-2" style={{ color: C.muted }}>
             <Filter size={14} /> FILTROS
@@ -1635,6 +1683,7 @@ const Catalog = ({ initialFilter = {}, onSelectProduct, title = 'Catálogo compl
               { v: 'hogar', l: 'Hogar' },
             ]},
             { key: 'brand', label: 'Marca', opts: ['todos', ...BRANDS] },
+            { key: 'family', label: 'Familia', opts: ['todos', ...FAMILIES] },
           ].map(f => (
             <div key={f.key} className="relative">
               <select
@@ -1686,6 +1735,137 @@ const Catalog = ({ initialFilter = {}, onSelectProduct, title = 'Catálogo compl
   );
 };
 
+
+// ============================================================
+// REVIEWS BLOCK
+// ============================================================
+const ReviewsBlock = ({ productId }) => {
+  const comments = useComments(productId);
+  const [name, setName] = useState('');
+  const [rating, setRating] = useState(5);
+  const [text, setText] = useState('');
+  const [sent, setSent] = useState(false);
+
+  const avg = comments.length > 0
+    ? (comments.reduce((s, c) => s + c.rating, 0) / comments.length).toFixed(1)
+    : null;
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!text.trim()) return;
+    addComment(productId, { name, rating, text });
+    setText('');
+    setName('');
+    setRating(5);
+    setSent(true);
+    setTimeout(() => setSent(false), 2500);
+  };
+
+  return (
+    <div className="max-w-3xl space-y-8">
+      <div className="grid sm:grid-cols-2 gap-6 items-start">
+        {/* Form */}
+        <form onSubmit={handleSubmit} className="bg-white p-5 border space-y-3" style={{ borderColor: '#E5E5E0' }}>
+          <div className="f-archivo font-bold text-sm" style={{ color: C.orange }}>DEJA TU RESEÑA</div>
+          <input
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder="Tu nombre (opcional)"
+            maxLength={60}
+            className="w-full border px-3 py-2 text-sm f-dm focus:outline-none focus:border-orange-500"
+            style={{ borderColor: '#D5D5D0' }}
+          />
+          <div className="flex items-center gap-1">
+            {[1,2,3,4,5].map(s => (
+              <button
+                type="button"
+                key={s}
+                onClick={() => setRating(s)}
+                aria-label={`${s} estrellas`}
+                className="p-0.5"
+              >
+                <Star size={20} fill={s <= rating ? C.orange : 'none'} style={{ color: C.orange }} />
+              </button>
+            ))}
+            <span className="text-xs f-archivo font-bold ml-2" style={{ color: C.muted }}>{rating}/5</span>
+          </div>
+          <textarea
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+            placeholder="Cuéntanos qué te pareció..."
+            maxLength={600}
+            rows={4}
+            className="w-full border px-3 py-2 text-sm f-dm focus:outline-none focus:border-orange-500 resize-none"
+            style={{ borderColor: '#D5D5D0' }}
+          />
+          <button
+            type="submit"
+            disabled={!text.trim() || sent}
+            className="w-full py-3 f-archivo font-bold text-sm tracking-wide text-white transition-colors disabled:opacity-50"
+            style={{ background: sent ? '#10B981' : C.navy }}
+          >
+            {sent ? '¡GRACIAS POR TU RESEÑA!' : 'PUBLICAR RESEÑA'}
+          </button>
+          <p className="text-[11px] f-dm" style={{ color: C.muted }}>
+            Tus reseñas se guardan en tu navegador y son visibles para ti. Pronto sincronizaremos con nuestra base de datos.
+          </p>
+        </form>
+
+        {/* Summary */}
+        <div className="space-y-4">
+          {avg !== null ? (
+            <div className="bg-white p-5 border" style={{ borderColor: '#E5E5E0' }}>
+              <div className="flex items-baseline gap-2">
+                <span className="f-archivo font-black text-4xl">{avg}</span>
+                <span className="text-sm" style={{ color: C.muted }}>/5</span>
+              </div>
+              <div className="flex items-center gap-1 my-2">
+                {[1,2,3,4,5].map(s => (
+                  <Star key={s} size={16} fill={s <= Math.round(avg) ? C.orange : 'none'} style={{ color: C.orange }} />
+                ))}
+              </div>
+              <p className="text-xs f-dm" style={{ color: C.muted }}>
+                Basado en {comments.length} {comments.length === 1 ? 'reseña' : 'reseñas'}
+              </p>
+            </div>
+          ) : (
+            <div className="bg-white p-5 border text-center" style={{ borderColor: '#E5E5E0' }}>
+              <Sparkles size={28} className="mx-auto mb-2" style={{ color: C.orange }} />
+              <p className="f-archivo font-bold">Sé el primero en opinar</p>
+              <p className="text-xs mt-1" style={{ color: C.muted }}>Comparte tu experiencia con este producto.</p>
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* List */}
+      {comments.length > 0 && (
+        <div className="space-y-4">
+          <div className="f-archivo font-bold text-sm" style={{ color: C.orange }}>OPINIONES RECIENTES</div>
+          {comments.map(c => (
+            <div key={c.id} className="bg-white p-4 border" style={{ borderColor: '#E5E5E0' }}>
+              <div className="flex items-center justify-between flex-wrap gap-2">
+                <div>
+                  <div className="f-archivo font-bold">{c.name}</div>
+                  <div className="flex items-center gap-1 mt-1">
+                    {[1,2,3,4,5].map(s => (
+                      <Star key={s} size={12} fill={s <= c.rating ? C.orange : 'none'} style={{ color: C.orange }} />
+                    ))}
+                  </div>
+                </div>
+                <div className="text-[11px] f-dm" style={{ color: C.muted }}>
+                  {new Date(c.date).toLocaleDateString('es-CO', { day: 'numeric', month: 'short', year: 'numeric' })}
+                </div>
+              </div>
+              <p className="text-sm f-dm leading-relaxed mt-3" style={{ color: '#3A3A3A' }}>{c.text}</p>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
 // ============================================================
 // PRODUCT DETAIL
 // ============================================================
@@ -1695,6 +1875,10 @@ const ProductDetail = ({ product, onBack, onAddToCart, onWhatsAppBuy, onSelectPr
   const [qty, setQty] = useState(1);
   const [added, setAdded] = useState(false);
   const [tab, setTab] = useState('description');
+  const productComments = useComments(product.id);
+  const productAvgRating = productComments.length > 0
+    ? productComments.reduce((s, c) => s + c.rating, 0) / productComments.length
+    : 0;
   
   const handleAdd = () => {
     onAddToCart(product, selectedVariant, qty);
@@ -1805,11 +1989,11 @@ const ProductDetail = ({ product, onBack, onAddToCart, onWhatsAppBuy, onSelectPr
                 </p>
               )}
               <div className="flex items-center gap-3 mt-3 text-sm">
-                <div className="flex items-center gap-1">
-                  {[1,2,3,4,5].map(s => <Star key={s} size={14} fill={C.orange} style={{ color: C.orange }} />)}
-                  <span className="f-archivo font-bold ml-1">4.8</span>
-                </div>
-                {/* reseñas placeholder removido — pendiente sistema real */}
+                <button onClick={() => setTab('reviews')} className="flex items-center gap-1 hover:opacity-70">
+                  {[1,2,3,4,5].map(s => <Star key={s} size={14} fill={s <= Math.round(productAvgRating) ? C.orange : 'none'} style={{ color: C.orange }} />)}
+                  <span className="f-archivo font-bold ml-1">{productAvgRating > 0 ? productAvgRating.toFixed(1) : '—'}</span>
+                  <span className="text-xs underline" style={{ color: C.muted }}>({productComments.length} {productComments.length === 1 ? 'reseña' : 'reseñas'})</span>
+                </button>
                 <span className="text-green-600 flex items-center gap-1 f-archivo font-bold text-xs"><Check size={12} /> En stock</span>
               </div>
             </div>
@@ -1937,6 +2121,7 @@ const ProductDetail = ({ product, onBack, onAddToCart, onWhatsAppBuy, onSelectPr
               { id: 'description', label: 'Descripción' },
               { id: 'notes', label: 'Notas olfativas' },
               { id: 'shipping', label: 'Envío y devoluciones' },
+              { id: 'reviews', label: 'Reseñas' },
             ].map(t => (
               <button
                 key={t.id}
@@ -1990,6 +2175,8 @@ const ProductDetail = ({ product, onBack, onAddToCart, onWhatsAppBuy, onSelectPr
               <p><strong className="f-archivo">Pago seguro:</strong> Procesamos pagos vía Wompi (Bancolombia), Bold o PayU. También aceptamos PSE, Nequi, Daviplata y pagos en cuotas con Addi.</p>
             </div>
           )}
+
+          {tab === 'reviews' && <ReviewsBlock productId={product.id} />}
         </div>
       </section>
       
@@ -2000,6 +2187,54 @@ const ProductDetail = ({ product, onBack, onAddToCart, onWhatsAppBuy, onSelectPr
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-5">
             {related.map(p => <ProductCard key={p.id} product={p} onClick={() => onSelectProduct(p.id)} />)}
           </div>
+        </div>
+      </section>
+    </main>
+  );
+};
+
+
+// ============================================================
+// WISHLIST VIEW
+// ============================================================
+const Wishlist = ({ onSelectProduct, onNavigate }) => {
+  const ids = useWishlist();
+  const items = PRODUCTS.filter(p => ids.includes(p.id));
+
+  return (
+    <main className="bg-white min-h-screen f-dm">
+      <section className="py-10 lg:py-12 border-b" style={{ background: C.cream, borderColor: '#E5E5E0' }}>
+        <div className="max-w-[1400px] mx-auto px-4 lg:px-8">
+          <div className="f-mono mb-3" style={{ color: C.orange }}>TUS FAVORITOS</div>
+          <h1 className="f-archivo font-black text-4xl lg:text-5xl mb-3">Lista de deseos</h1>
+          <p style={{ color: C.muted }}>
+            {items.length === 0
+              ? 'Aún no has guardado productos. Toca el ❤ para agregar a esta lista.'
+              : `${items.length} ${items.length === 1 ? 'producto guardado' : 'productos guardados'}`}
+          </p>
+        </div>
+      </section>
+
+      <section className="py-10">
+        <div className="max-w-[1400px] mx-auto px-4 lg:px-8">
+          {items.length === 0 ? (
+            <div className="text-center py-16">
+              <Heart size={48} className="mx-auto mb-4" strokeWidth={1.5} style={{ color: C.orange }} />
+              <p className="f-archivo font-bold text-xl mb-2">Tu lista está vacía</p>
+              <p className="text-sm mb-6" style={{ color: C.muted }}>Toca el corazón en cualquier producto para guardarlo aquí.</p>
+              <button
+                onClick={() => onNavigate('catalog')}
+                className="text-white px-6 py-3 f-archivo font-bold text-sm"
+                style={{ background: C.navy }}
+              >
+                EXPLORAR CATÁLOGO
+              </button>
+            </div>
+          ) : (
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-5">
+              {items.map(p => <ProductCard key={p.id} product={p} onClick={() => onSelectProduct(p.id)} />)}
+            </div>
+          )}
         </div>
       </section>
     </main>
@@ -2551,6 +2786,7 @@ export default function App() {
     if (view === 'catalog-inspirado') return <Catalog initialFilter={{ type: 'inspirado' }} title="Esencias inspiradas premium" onSelectProduct={selectProduct} />;
     if (view === 'catalog-bestsellers') return <Catalog initialFilter={{ bestseller: true }} title="Los más vendidos" onSelectProduct={selectProduct} />;
     if (view === 'product' && product) return <ProductDetail product={product} onBack={() => navigate('catalog')} onAddToCart={addToCart} onWhatsAppBuy={productWhatsApp} onSelectProduct={selectProduct} />;
+    if (view === 'wishlist') return <Wishlist onSelectProduct={selectProduct} onNavigate={navigate} />;
     if (view === 'track') return <TrackOrder />;
     if (view === 'maison') return <Maison />;
     if (view === 'admin') return <Admin />;
