@@ -79,7 +79,7 @@ const PRODUCTS = [
     description: 'Una celebración árabe en frasco. Khamrah de Lattafa es un oriental dulce y especiado que recuerda el ambiente de una boda en el desierto. Apertura cálida con dátiles confitados y canela, corazón de vainilla cremosa, fondo de tonka, praliné y mirra. Buena proyección, durabilidad de 8+ horas.',
     color: { primary: '#3D1A0F', accent: '#8B4513', shadow: 'rgba(139,69,19,0.3)' },
     variants: [{ size: '100ml', tier: 'AAA', price: 165000, stock: 12 }],
-    imageUrl: '', // ← Pegar URL de la foto Lattafa Khamrah (clásica, frasco transparente con líquido ámbar)
+    imageUrl: '/images/products/khamrah.png',
     featured: true,
     bestseller: true,
   },
@@ -94,7 +94,7 @@ const PRODUCTS = [
     description: 'La versión café del icónico Khamrah. Cardamomo verde y café espresso recién molido sobre una base de cacao amargo y vainilla bourbon. Para quienes aman el aroma del café pero en clave de perfume.',
     color: { primary: '#2A1810', accent: '#6B3D1F', shadow: 'rgba(107,61,31,0.3)' },
     variants: [{ size: '100ml', tier: 'AAA', price: 170000, stock: 8 }],
-    imageUrl: '',
+    imageUrl: '/images/products/khamrah-qahwa.png',
     featured: true,
   },
   {
@@ -108,7 +108,7 @@ const PRODUCTS = [
     description: 'La cara más ahumada de la familia Khamrah. Ámbar resinoso con un velo de incienso y maderas oscuras. Para quienes buscan un oriental con carácter contemplativo.',
     color: { primary: '#2D1812', accent: '#7A3D24', shadow: 'rgba(122,61,36,0.3)' },
     variants: [{ size: '100ml', tier: 'AAA', price: 175000, stock: 7 }],
-    imageUrl: '',
+    imageUrl: '/images/products/khamrah-dukhan.png',
   },
   {
     id: 'bade-al-oud-sublime',
@@ -121,7 +121,7 @@ const PRODUCTS = [
     description: 'El oud encuentra a la frambuesa negra. Apertura jugosa y oscura, corazón de oud noble y azafrán, fondo de ámbar y pachulí. Para portar en ocasiones especiales — proyecta hasta el otro lado de la sala.',
     color: { primary: '#3D0E1F', accent: '#7A1E3E', shadow: 'rgba(122,30,62,0.35)' },
     variants: [{ size: '100ml', tier: 'AAA', price: 180000, stock: 5 }],
-    imageUrl: '',
+    imageUrl: '/images/products/bade-al-oud-sublime.png',
     featured: true,
   },
   {
@@ -135,7 +135,7 @@ const PRODUCTS = [
     description: 'El oud árabe en su versión más imponente. Apertura especiada con azafrán, corazón de rosa y oud envejecido, fondo de cuero y ámbar. Frasco negro con detalles dorados, presentación premium.',
     color: { primary: '#1A1209', accent: '#8B6F2B', shadow: 'rgba(139,111,43,0.3)' },
     variants: [{ size: '100ml', tier: 'AAA', price: 178000, stock: 6 }],
-    imageUrl: '',
+    imageUrl: '/images/products/bade-al-oud-glory.png',
     featured: true,
   },
   {
@@ -149,7 +149,7 @@ const PRODUCTS = [
     description: 'Manzana negra confitada sobre un cuero curtido. Lattafa Asad es el perfume árabe de cuero por excelencia, con una potencia que recuerda a fragancias de diseñador del doble del precio.',
     color: { primary: '#2A1108', accent: '#5C2D17', shadow: 'rgba(92,45,23,0.3)' },
     variants: [{ size: '100ml', tier: 'AAA', price: 145000, stock: 10 }],
-    imageUrl: '',
+    imageUrl: '/images/products/asad.png',
   },
   {
     id: 'asad-bourbon',
@@ -162,7 +162,7 @@ const PRODUCTS = [
     description: 'La versión gourmand del Asad clásico. Bourbon, vainilla y tabaco sobre un fondo amaderado y de cuero suave. Más dulce y nocturno que el Asad original.',
     color: { primary: '#2D1B0E', accent: '#6B3F1F', shadow: 'rgba(107,63,31,0.3)' },
     variants: [{ size: '100ml', tier: 'AAA', price: 150000, stock: 9 }],
-    imageUrl: '',
+    imageUrl: '/images/products/asad-bourbon.png',
   },
   {
     id: 'club-nuit-intense',
@@ -175,7 +175,7 @@ const PRODUCTS = [
     description: 'La opción árabe más conocida del segmento. Frescura cítrica seguida de un corazón especiado y un fondo amaderado denso. Versátil — funciona en oficina, cena y noche.',
     color: { primary: '#1A1E14', accent: '#3D4A2B', shadow: 'rgba(61,74,43,0.3)' },
     variants: [{ size: '100ml', tier: 'AAA', price: 150000, stock: 18 }],
-    imageUrl: '',
+    imageUrl: '/images/products/club-nuit-intense.png',
     bestseller: true,
   },
   {
@@ -189,7 +189,7 @@ const PRODUCTS = [
     description: 'Apertura de manzana especiada con un fondo de vainilla y sándalo cremoso. Una opción dulce-masculina con presencia segura sin volverse abrumadora.',
     color: { primary: '#1A1A1A', accent: '#3D2914', shadow: 'rgba(61,41,20,0.3)' },
     variants: [{ size: '100ml', tier: 'AAA', price: 140000, stock: 15 }],
-    imageUrl: '',
+    imageUrl: '/images/products/9pm.png',
   },
   {
     id: 'bharara-king',
@@ -202,7 +202,7 @@ const PRODUCTS = [
     description: 'Un aromático especiado con presencia. Frescura inicial con cardamomo y pimienta, fondo de cuero y ámbar. Frasco transparente con tapa cobre, diseño elegante.',
     color: { primary: '#0D1F2D', accent: '#5C3E1F', shadow: 'rgba(92,62,31,0.3)' },
     variants: [{ size: '100ml', tier: 'AAA', price: 155000, stock: 9 }],
-    imageUrl: '',
+    imageUrl: '/images/products/bharara-king.png',
   },
   {
     id: 'bharara-bleu',
@@ -215,7 +215,7 @@ const PRODUCTS = [
     description: 'La interpretación de Bharara del acorde acuático masculino. Frescura salina con un fondo amaderado limpio. Frasco azul cobalto con etiqueta dorada.',
     color: { primary: '#0A2540', accent: '#2A5A8A', shadow: 'rgba(42,90,138,0.3)' },
     variants: [{ size: '100ml', tier: 'AAA', price: 155000, stock: 11 }],
-    imageUrl: '',
+    imageUrl: '/images/products/bharara-bleu.png',
   },
   {
     id: 'amber-rouge',
@@ -228,7 +228,7 @@ const PRODUCTS = [
     description: 'El ámbar oriental en su versión más ornamental. Rosa y azafrán abren paso a un fondo denso de ámbar y oud. Frasco con detalles tipo joyería rosé gold.',
     color: { primary: '#4A0E1A', accent: '#A8475C', shadow: 'rgba(168,71,92,0.35)' },
     variants: [{ size: '100ml', tier: 'AAA', price: 175000, stock: 7 }],
-    imageUrl: '',
+    imageUrl: '/images/products/amber-rouge.png',
     featured: true,
   },
   {
@@ -242,7 +242,7 @@ const PRODUCTS = [
     description: 'Fragancia masculina fresca con notas aromáticas y un fondo amaderado limpio. Presentación premium en frasco azul con grabado de planetas.',
     color: { primary: '#0F1F4A', accent: '#3D5A8A', shadow: 'rgba(61,90,138,0.3)' },
     variants: [{ size: '100ml', tier: 'AAA', price: 170000, stock: 8 }],
-    imageUrl: '',
+    imageUrl: '/images/products/art-of-universe.png',
   },
   {
     id: 'emeer',
@@ -255,7 +255,7 @@ const PRODUCTS = [
     description: 'Composición oriental masculina con notas especiadas y un fondo ámbar-cuero. Frasco dorado calado, presentación distintiva.',
     color: { primary: '#3D2A0F', accent: '#A8852B', shadow: 'rgba(168,133,43,0.3)' },
     variants: [{ size: '100ml', tier: 'AAA', price: 165000, stock: 10 }],
-    imageUrl: '',
+    imageUrl: '/images/products/emeer.png',
   },
   {
     id: 'his-confession',
@@ -268,7 +268,7 @@ const PRODUCTS = [
     description: 'Oriental masculino con carácter clásico. Notas especiadas sobre un fondo de cuero y tabaco rubio. Presentación con busto escultórico negro y dorado.',
     color: { primary: '#1A0F0A', accent: '#8B6F2B', shadow: 'rgba(139,111,43,0.3)' },
     variants: [{ size: '100ml', tier: 'AAA', price: 175000, stock: 6 }],
-    imageUrl: '',
+    imageUrl: '/images/products/his-confession.png',
   },
   {
     id: 'yara',
@@ -281,7 +281,7 @@ const PRODUCTS = [
     description: 'El perfume árabe femenino más viral del año. Dulce, cremoso, adictivo. Tonka y vainilla sobre un acorde frutal floral. La fragancia más comentada en TikTok.',
     color: { primary: '#3D1A2A', accent: '#7A3852', shadow: 'rgba(122,56,82,0.3)' },
     variants: [{ size: '100ml', tier: 'AAA', price: 160000, stock: 22 }],
-    imageUrl: '',
+    imageUrl: '/images/products/yara.png',
     featured: true,
     bestseller: true,
   },
@@ -296,7 +296,7 @@ const PRODUCTS = [
     description: 'La evolución gourmand del icónico Yara. Más dulce, más jugoso, con un acorde de caramelo y frambuesa que se siente como postre líquido.',
     color: { primary: '#4A1E2A', accent: '#A8475C', shadow: 'rgba(168,71,92,0.3)' },
     variants: [{ size: '100ml', tier: 'AAA', price: 160000, stock: 14 }],
-    imageUrl: '',
+    imageUrl: '/images/products/yara-candy.png',
   },
   {
     id: 'odyssey-mandarin',
@@ -309,7 +309,7 @@ const PRODUCTS = [
     description: 'Cítrico fresco con un acorde de mandarina jugosa y un fondo limpio amaderado. Edición limitada con funda en cuero turquesa, presentación de colección.',
     color: { primary: '#0F4A6B', accent: '#F58220', shadow: 'rgba(245,130,32,0.3)' },
     variants: [{ size: '100ml', tier: 'AAA', price: 165000, stock: 8 }],
-    imageUrl: '',
+    imageUrl: '/images/products/odyssey-mandarin.png',
   },
   {
     id: 'amber-oud-rouge',
@@ -322,7 +322,7 @@ const PRODUCTS = [
     description: 'Oud árabe clásico con un corazón de rosa búlgara y un fondo de ámbar resinoso. Una de las opciones más reconocidas de Al Haramain para entrar al mundo del oud.',
     color: { primary: '#4A1818', accent: '#A8525C', shadow: 'rgba(168,82,92,0.3)' },
     variants: [{ size: '100ml', tier: 'AAA', price: 165000, stock: 9 }],
-    imageUrl: '',
+    imageUrl: '/images/products/amber-oud-rouge.png',
   },
   
   // ============================================================
@@ -601,7 +601,7 @@ const PRODUCTS = [
       { size: '100ml', tier: 'AA', price: 88000, stock: 16 },
       { size: '100ml', tier: 'AAA', price: 180000, stock: 8 },
     ],
-    imageUrl: '',
+    imageUrl: '/images/products/insp-coco-mademoiselle.png',
     bestseller: true,
   },
   {
@@ -1499,6 +1499,7 @@ const Catalog = ({ initialFilter = {}, onSelectProduct, title = 'Catálogo compl
 // PRODUCT DETAIL
 // ============================================================
 const ProductDetail = ({ product, onBack, onAddToCart, onWhatsAppBuy, onSelectProduct }) => {
+  const [activeImage, setActiveImage] = useState('product');
   const [selectedVariant, setSelectedVariant] = useState(product.variants[0]);
   const [qty, setQty] = useState(1);
   const [added, setAdded] = useState(false);
@@ -1536,17 +1537,42 @@ const ProductDetail = ({ product, onBack, onAddToCart, onWhatsAppBuy, onSelectPr
       
       <section className="pb-16">
         <div className="max-w-[1400px] mx-auto px-4 lg:px-8 grid lg:grid-cols-2 gap-8 lg:gap-12">
-          {/* Left: image */}
+          {/* Left: image gallery (perfume + tamaños) */}
           <div>
             <div className="bg-white border" style={{ borderColor: '#E5E5E0' }}>
-              <ProductImage product={product} aspect="aspect-square" />
-            </div>
-            <div className="grid grid-cols-4 gap-2 mt-2">
-              {[0, 1, 2, 3].map(i => (
-                <div key={i} className="aspect-square bg-white border cursor-pointer hover:border-orange-500" style={{ borderColor: '#E5E5E0' }}>
-                  <ProductImage product={product} aspect="aspect-square" />
+              {activeImage === 'tamanos' ? (
+                <div className="relative aspect-square bg-white overflow-hidden flex items-center justify-center">
+                  <img
+                    src="/images/products/tamanos-disponibles.png"
+                    alt="Tamaños disponibles"
+                    className="relative max-w-[95%] max-h-[95%] object-contain"
+                  />
                 </div>
-              ))}
+              ) : (
+                <ProductImage product={product} aspect="aspect-square" />
+              )}
+            </div>
+            <div className="grid grid-cols-2 gap-2 mt-2">
+              <button
+                type="button"
+                onClick={() => setActiveImage('product')}
+                className="aspect-square bg-white border cursor-pointer hover:border-orange-500 transition-colors"
+                style={{ borderColor: activeImage === 'product' ? '#F58220' : '#E5E5E0' }}
+              >
+                <ProductImage product={product} aspect="aspect-square" />
+              </button>
+              <button
+                type="button"
+                onClick={() => setActiveImage('tamanos')}
+                className="aspect-square bg-white border cursor-pointer hover:border-orange-500 transition-colors flex items-center justify-center p-2"
+                style={{ borderColor: activeImage === 'tamanos' ? '#F58220' : '#E5E5E0' }}
+              >
+                <img
+                  src="/images/products/tamanos-disponibles.png"
+                  alt="Tamaños disponibles"
+                  className="max-w-full max-h-full object-contain"
+                />
+              </button>
             </div>
           </div>
           
