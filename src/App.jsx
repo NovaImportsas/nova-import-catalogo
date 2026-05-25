@@ -987,6 +987,48 @@ const minPrice = (p) => Math.min(...p.variants.map(v => v.price));
 const maxPrice = (p) => Math.max(...p.variants.map(v => v.price));
 const totalStock = (p) => p.variants.reduce((s, v) => s + v.stock, 0);
 
+// Wishlist (localStorage based)
+const WISHLIST_KEY = 'novaimport_wishlist';
+let wishlistCache = null;
+let wishlistListeners = [];
+const getWishlist = () => {
+  if (wishlistCache !== null) return wishlistCache;
+  try {
+    const raw = typeof window !== 'undefined' ? window.localStorage.getItem(WISHLIST_KEY) : null;
+    wishlistCache = raw ? JSON.parse(raw) : [];
+  } catch (e) { wishlistCache = []; }
+  return wishlistCache;
+};
+const isInWishlist = (id) => getWishlist().includes(id);
+const toggleWishlist = (id) => {
+  const list = getWishlist();
+  const idx = list.indexOf(id);
+  if (idx >= 0) list.splice(idx, 1);
+  else list.push(id);
+  wishlistCache = [...list];
+  try { window.localStorage.setItem(WISHLIST_KEY, JSON.stringify(wishlistCache)); } catch (e) {}
+  wishlistListeners.forEach(fn => fn(wishlistCache));
+};
+const useWishlist = () => {
+  const [, setTick] = useState(0);
+  useEffect(() => {
+    const listener = () => setTick(t => t + 1);
+    wishlistListeners.push(listener);
+    return () => { wishlistListeners = wishlistListeners.filter(l => l !== listener); };
+  }, []);
+  return getWishlist();
+};
+
+// E-commerce links — generate search URLs by product name
+const SHOPIFY_BASE = 'https://novaimport.myshopify.com'; // TODO: actualizar al dominio real
+const MERCADOLIBRE_BASE = 'https://listado.mercadolibre.com.co';
+const buildSearchTerm = (product) => {
+  const base = product.name.replace(/[·\u00b7\u2022]/g, '').replace(/\s+/g,' ').trim();
+  return encodeURIComponent(base);
+};
+const getMercadoLibreUrl = (product) => `${MERCADOLIBRE_BASE}/${buildSearchTerm(product)}`;
+const getShopifyUrl = (product) => `${SHOPIFY_BASE}/search?q=${buildSearchTerm(product)}`;
+
 // ============================================================
 // PRODUCT IMAGE — Photographic style on white
 // ============================================================
@@ -1117,7 +1159,7 @@ const Header = ({ onNavigate, currentView, cartCount, onCartOpen }) => {
     { id: 'catalog-bebe', label: 'Bebé' },
     { id: 'catalog-mascotas', label: 'Mascotas' },
     { id: 'catalog-hogar', label: 'Hogar' },
-    { id: 'catalog-arabe', label: 'Perfumería' },
+    { id: 'catalog-perfumeria', label: 'Perfumería' },
     { id: 'catalog-bestsellers', label: 'Más vendidos', highlight: true },
     { id: 'maison', label: 'Nosotros' },
   ];
@@ -1216,6 +1258,7 @@ const Header = ({ onNavigate, currentView, cartCount, onCartOpen }) => {
 // PRODUCT CARD
 // ============================================================
 const ProductCard = ({ product, onClick }) => {
+  useWishlist(); // subscribe to wishlist changes
   const stock = totalStock(product);
   const min = minPrice(product);
   const hasRange = product.variants.length > 1;
@@ -1261,9 +1304,18 @@ const ProductCard = ({ product, onClick }) => {
           </span>
         )}
         
-        {/* Heart */}
-        <button className="absolute bottom-3 right-3 w-9 h-9 bg-white rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-transform" onClick={(e) => e.stopPropagation()}>
-          <Heart size={14} strokeWidth={2} style={{ color: C.navy }} />
+        {/* Heart - Wishlist */}
+        <button
+          className="absolute bottom-3 right-3 w-9 h-9 bg-white rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-transform"
+          onClick={(e) => { e.stopPropagation(); toggleWishlist(product.id); }}
+          aria-label={isInWishlist(product.id) ? 'Quitar de favoritos' : 'Añadir a favoritos'}
+        >
+          <Heart
+            size={14}
+            strokeWidth={2}
+            fill={isInWishlist(product.id) ? C.orange : 'none'}
+            style={{ color: isInWishlist(product.id) ? C.orange : C.navy }}
+          />
         </button>
       </div>
       
@@ -1335,7 +1387,7 @@ const Home = ({ onNavigate, onSelectProduct }) => {
               </button>
             </div>
             <div className="flex gap-6 pt-4 text-sm">
-              <div className="flex items-center gap-2"><Star size={14} fill={C.orange} style={{ color: C.orange }} /><span><strong className="f-archivo">4.9</strong> · 1.847 reseñas</span></div>
+              <div className="flex items-center gap-2"><Star size={14} fill={C.orange} style={{ color: C.orange }} /><span><strong className="f-archivo">4.9</strong> · +5.000 clientes</span></div>
               <div className="flex items-center gap-2"><Check size={14} style={{ color: C.orange }} /><span>+5.000 clientes</span></div>
             </div>
           </div>
@@ -1390,7 +1442,7 @@ const Home = ({ onNavigate, onSelectProduct }) => {
               { id: 'catalog-bebe', label: 'BEBÉ', sub: 'Vajilla · Juguetes · Esenciales', color: '#A8475C' },
               { id: 'catalog-mascotas', label: 'MASCOTAS', sub: 'Entrenamiento · Cuidado', color: '#2A6B4A' },
               { id: 'catalog-hogar', label: 'HOGAR', sub: 'Organización · Baño · Cocina', color: C.navy },
-              { id: 'catalog-arabe', label: 'PERFUMERÍA', sub: 'Árabes · Inspirados premium', color: C.orange },
+              { id: 'catalog-perfumeria', label: 'PERFUMERÍA', sub: 'Árabes · Inspirados premium', color: C.orange },
             ].map(c => (
               <button key={c.id} onClick={() => onNavigate(c.id)} className="aspect-[4/5] lg:aspect-[3/4] relative overflow-hidden group" style={{ background: c.color }}>
                 <div className="absolute inset-0 opacity-90 group-hover:opacity-100 transition-opacity" style={{ background: `linear-gradient(180deg, ${c.color}DD 0%, ${c.color} 100%)` }} />
@@ -1545,6 +1597,7 @@ const Catalog = ({ initialFilter = {}, onSelectProduct, title = 'Catálogo compl
   
   let products = PRODUCTS.filter(p => {
     if (filters.bestseller && !p.bestseller) return false;
+    if (filters.typeIn && Array.isArray(filters.typeIn) && !filters.typeIn.includes(p.type)) return false;
     if (filters.gender !== 'todos' && p.gender !== filters.gender && p.gender !== 'Unisex') return false;
     if (filters.type !== 'todos' && p.type !== filters.type) return false;
     if (filters.brand !== 'todos' && p.brand !== filters.brand) return false;
@@ -1756,7 +1809,7 @@ const ProductDetail = ({ product, onBack, onAddToCart, onWhatsAppBuy, onSelectPr
                   {[1,2,3,4,5].map(s => <Star key={s} size={14} fill={C.orange} style={{ color: C.orange }} />)}
                   <span className="f-archivo font-bold ml-1">4.8</span>
                 </div>
-                <span style={{ color: C.muted }}>· 127 reseñas</span>
+                {/* reseñas placeholder removido — pendiente sistema real */}
                 <span className="text-green-600 flex items-center gap-1 f-archivo font-bold text-xs"><Check size={12} /> En stock</span>
               </div>
             </div>
@@ -1840,12 +1893,26 @@ const ProductDetail = ({ product, onBack, onAddToCart, onWhatsAppBuy, onSelectPr
                 {added ? <><CheckCircle2 size={16} /> AÑADIDO AL CARRITO</> : <><ShoppingBag size={16} /> AÑADIR AL CARRITO · {fmt(selectedVariant.price * qty)}</>}
               </button>
               
-              <button
-                onClick={handleWhatsApp}
-                className="w-full py-4 f-archivo font-bold text-sm tracking-wide flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 text-white transition-colors"
-              >
-                <MessageCircle size={16} /> COMPRAR POR WHATSAPP
-              </button>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <a
+                  href={getMercadoLibreUrl(product)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-4 f-archivo font-bold text-sm tracking-wide flex items-center justify-center gap-2 text-white transition-colors"
+                  style={{ background: '#FFE600', color: '#2D3277' }}
+                >
+                  <ExternalLink size={14} /> COMPRAR EN MERCADO LIBRE
+                </a>
+                <a
+                  href={getShopifyUrl(product)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-4 f-archivo font-bold text-sm tracking-wide flex items-center justify-center gap-2 text-white transition-colors"
+                  style={{ background: '#5E8E3E' }}
+                >
+                  <ExternalLink size={14} /> COMPRAR EN SHOPIFY
+                </a>
+              </div>
             </div>
             
             <div className="grid grid-cols-2 gap-3 pt-2">
@@ -2329,6 +2396,7 @@ const Footer = ({ onNavigate }) => (
             <li><button onClick={() => onNavigate('catalog-bebe')} className="hover:text-white">Bebé</button></li>
             <li><button onClick={() => onNavigate('catalog-mascotas')} className="hover:text-white">Mascotas</button></li>
             <li><button onClick={() => onNavigate('catalog-hogar')} className="hover:text-white">Hogar</button></li>
+            <li><button onClick={() => onNavigate('catalog-perfumeria')} className="hover:text-white">Perfumería (todos)</button></li>
             <li><button onClick={() => onNavigate('catalog-arabe')} className="hover:text-white">Perfumería árabe</button></li>
             <li><button onClick={() => onNavigate('catalog-inspirado')} className="hover:text-white">Esencias inspiradas</button></li>
             <li><button onClick={() => onNavigate('catalog-bestsellers')} className="hover:text-white">Más vendidos</button></li>
@@ -2476,6 +2544,7 @@ export default function App() {
     if (view === 'catalog-bebe') return <Catalog initialFilter={{ type: 'bebe' }} title="Productos para bebé" onSelectProduct={selectProduct} />;
     if (view === 'catalog-mascotas') return <Catalog initialFilter={{ type: 'mascotas' }} title="Productos para mascotas" onSelectProduct={selectProduct} />;
     if (view === 'catalog-hogar') return <Catalog initialFilter={{ type: 'hogar' }} title="Productos para el hogar" onSelectProduct={selectProduct} />;
+    if (view === 'catalog-perfumeria') return <Catalog initialFilter={{ typeIn: ['arabe', 'inspirado'] }} title="Perfumería · Árabes e Inspirados" onSelectProduct={selectProduct} />;
     if (view === 'catalog-hombre') return <Catalog initialFilter={{ gender: 'Hombre' }} title="Fragancias para él" onSelectProduct={selectProduct} />;
     if (view === 'catalog-mujer') return <Catalog initialFilter={{ gender: 'Mujer' }} title="Fragancias para ella" onSelectProduct={selectProduct} />;
     if (view === 'catalog-arabe') return <Catalog initialFilter={{ type: 'arabe' }} title="Marcas árabes 100% originales" onSelectProduct={selectProduct} />;
