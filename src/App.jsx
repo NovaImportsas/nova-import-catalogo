@@ -55,7 +55,7 @@ const Logo = ({ variant = 'header' }) => {
           <span style={{ color: C.navy }}>Nova</span>
           <span style={{ color: C.orange }}> Import</span>
         </div>
-        <div className="f-archivo text-[9px] tracking-[0.25em] mt-0.5" style={{ color: C.muted }}>PERFUMERÍA</div>
+
       </div>
     </div>
   );
@@ -1182,14 +1182,14 @@ const Home = ({ onNavigate, onSelectProduct }) => {
         <div className="relative max-w-[1400px] mx-auto px-4 lg:px-8 py-12 lg:py-20 grid lg:grid-cols-2 gap-8 items-center">
           <div className="text-white space-y-6">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full f-archivo text-xs font-bold tracking-wider" style={{ background: 'rgba(245,130,32,0.2)', color: C.orange }}>
-              <Sparkles size={12} /> IMPORTACIÓN DIRECTA · DUBÁI
+              <Sparkles size={12} /> IMPORTACIÓN DIRECTA
             </div>
             <h1 className="f-archivo font-black text-5xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tight">
-              Tu firma<br />olfativa<br />
-              <span style={{ color: C.orange }}>al precio justo.</span>
+              Productos<br />que se<br />
+              <span style={{ color: C.orange }}>venden solos.</span>
             </h1>
             <p className="text-white/80 max-w-md text-lg leading-relaxed">
-              Perfumes árabes 100% originales y esencias inspiradas de alta calidad. Desde $15.000. Despachamos a toda Colombia en 24-72 horas.
+              Importamos tendencias, perfumería y productos seleccionados con calidad garantizada y envíos rápidos a toda Colombia.
             </p>
             <div className="flex flex-wrap gap-3 pt-2">
               <button onClick={() => onNavigate('catalog')} className="px-7 py-4 f-archivo font-bold text-sm tracking-wide flex items-center gap-3 hover:scale-105 transition-transform" style={{ background: C.orange, color: 'white' }}>
@@ -1224,10 +1224,10 @@ const Home = ({ onNavigate, onSelectProduct }) => {
       <section className="border-b" style={{ borderColor: '#E5E5E0', background: C.cream }}>
         <div className="max-w-[1400px] mx-auto px-4 lg:px-8 py-6 grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
           {[
-            { icon: Award, title: '100% Originales', sub: 'Marcas árabes certificadas' },
-            { icon: Truck, title: 'Envío 24-72h', sub: 'Toda Colombia · Servientrega' },
-            { icon: Shield, title: 'Compra segura', sub: 'Wompi · Bold · PayU' },
-            { icon: MessageCircle, title: 'Atención WhatsApp', sub: 'Lun-Sáb 8am-8pm' },
+            { icon: Truck, title: 'Despachos nacionales rápidos', sub: 'Entregas de 24 a 72 horas en ciudades principales.' },
+            { icon: Award, title: 'Productos seleccionados', sub: 'Importamos referencias con alta demanda y excelente relación calidad-precio.' },
+            { icon: Shield, title: 'Compra con confianza', sub: 'Pagos seguros y soporte directo por WhatsApp.' },
+            { icon: Sparkles, title: 'Nuevos productos constantemente', sub: 'Actualizamos el catálogo con tendencias y productos virales.' },
           ].map((t, i) => {
             const Icon = t.icon;
             return (
@@ -2017,7 +2017,7 @@ const Maison = () => (
       <div className="max-w-4xl mx-auto px-4 lg:px-8 text-white">
         <div className="f-mono mb-4" style={{ color: C.orange }}>NUESTRA HISTORIA</div>
         <h1 className="f-archivo font-black text-5xl lg:text-7xl leading-[0.95] mb-6">Nova Import S.A.S.</h1>
-        <p className="text-xl lg:text-2xl text-white/80 max-w-2xl">Importamos las mejores fragancias del Medio Oriente y producimos esencias inspiradas de alta calidad. Directo del fabricante al cliente final.</p>
+        <p className="text-xl lg:text-2xl text-white/80 max-w-2xl">Importadora de productos seleccionados — tendencias, perfumería y categorías virales — con calidad garantizada y envíos rápidos a toda Colombia. Trabajamos directo con los fabricantes para ofrecerte la mejor relación calidad-precio.</p>
       </div>
     </section>
     
@@ -2025,8 +2025,8 @@ const Maison = () => (
       <div className="max-w-4xl mx-auto px-4 lg:px-8 grid md:grid-cols-3 gap-10 text-center">
         {[
           { num: '+5.000', label: 'Clientes satisfechos en Colombia' },
-          { num: '4', label: 'Marcas árabes representadas' },
-          { num: '120+', label: 'Fragancias en catálogo' },
+          { num: '24-72h', label: 'Tiempo promedio de entrega' },
+          { num: '100%', label: 'Productos con calidad garantizada' },
         ].map((s, i) => (
           <div key={i}>
             <div className="f-archivo font-black text-6xl mb-2" style={{ color: C.orange }}>{s.num}</div>
@@ -2041,10 +2041,10 @@ const Maison = () => (
         <h2 className="f-archivo font-black text-3xl lg:text-4xl">¿Por qué Nova Import?</h2>
         <div className="space-y-5">
           {[
-            { title: 'Importación directa', text: 'Trabajamos directo con las fábricas en Dubái — Lattafa, Armaf, Afnan, Bharara. Sin intermediarios, sin sobrecostos.' },
-            { title: 'Esencias premium', text: 'Producimos esencias inspiradas en dos calidades: AA (estándar) y AAA (premium con larga duración). Procesos de envejecimiento de 4-6 semanas.' },
-            { title: 'Atención humana', text: 'Hablas por WhatsApp con personas reales, no con un bot. Asesoría olfativa antes de comprar, sin obligación.' },
-            { title: 'Garantía total', text: '30 días para devolver o cambiar tu fragancia si no es lo que esperabas. Defectos de fábrica cubiertos al 100%.' },
+            { title: 'Importación directa', text: 'Trabajamos directo con los fabricantes para evitar intermediarios y trasladarte el mejor precio. Curamos cada referencia antes de incluirla en catálogo.' },
+            { title: 'Productos seleccionados', text: 'Solo importamos productos con demanda comprobada y excelente relación calidad-precio. Tendencias, virales y categorías ganadoras.' },
+            { title: 'Atención humana', text: 'Hablas por WhatsApp con personas reales, no con un bot. Asesoría antes de comprar, sin obligación.' },
+            { title: 'Garantía total', text: '30 días para devolver o cambiar tu producto si no es lo que esperabas. Defectos de fábrica cubiertos al 100%.' },
           ].map((b, i) => (
             <div key={i} className="flex gap-4">
               <div className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 f-archivo font-black text-white" style={{ background: C.orange }}>
@@ -2160,10 +2160,9 @@ const Footer = ({ onNavigate }) => (
             </div>
             <div>
               <div className="f-archivo font-black text-xl text-white leading-none">Nova Import</div>
-              <div className="f-archivo text-[9px] tracking-[0.25em] mt-0.5">PERFUMERÍA</div>
             </div>
           </div>
-          <p className="text-sm">Importadores directos de perfumería árabe y esencias inspiradas premium.</p>
+          <p className="text-sm">Importadora de productos seleccionados, perfumería y tendencias con calidad garantizada.</p>
           <div className="flex gap-3">
             <Instagram size={20} className="hover:text-white cursor-pointer" />
             <Facebook size={20} className="hover:text-white cursor-pointer" />
