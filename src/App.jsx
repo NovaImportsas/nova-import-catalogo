@@ -849,6 +849,134 @@ const PRODUCTS = [
     ],
     imageUrl: '/images/products/insp-valentino-intense.png',
   },
+  // ============================================================
+  // PRODUCTOS — BEBÉ
+  // ============================================================
+  {
+    id: 'spinner-sensorial-bebe',
+    name: 'Set X3 Spinner Sensorial Bebé con Ventosa',
+    brand: 'Nova Import',
+    type: 'bebe',
+    family: 'Juguetes sensoriales',
+    gender: 'Unisex',
+    notes: 'Estimulación sensorial · Motricidad fina · Ventosa segura · Sin BPA',
+    description: 'Set de 3 spinners sensoriales con animales adorables (abeja, sol y zanahoria) y base de ventosa antideslizante. Ideal para estimular la motricidad fina y la coordinación del bebé. Materiales seguros para edades tempranas, sin BPA. Se adhieren a superficies lisas como mesa, silla de comer o ventana.',
+    color: { primary: '#FFB84C', accent: '#FF6B6B', shadow: 'rgba(255,184,76,0.3)' },
+    variants: [{ size: 'Set x3 unidades', tier: 'AAA', price: 30000, stock: 100 }],
+    imageUrl: '/images/products/spinner-1.png',
+    gallery: [
+      '/images/products/spinner-1.png',
+      '/images/products/spinner-2.png',
+      '/images/products/spinner-3.png',
+      '/images/products/spinner-4.png',
+    ],
+    featured: true,
+    bestseller: true,
+  },
+  {
+    id: 'vaso-pitillo-bebe',
+    name: 'Vaso Infantil con Pitillo · Arcoíris',
+    brand: 'Nova Import',
+    type: 'bebe',
+    family: 'Vajilla infantil',
+    gender: 'Mujer',
+    notes: 'Silicona suave · Pitillo integrado · Tapa hermética · Diseño arcoíris',
+    description: 'Vaso entrenador de silicona con pitillo integrado y tapa hermética. Diseño en tono rosa con detalle de arcoíris ideal para niñas. Material suave que protege las encías y los dientes del bebé. Apto para lavavajillas. Capacidad aproximada 250 ml.',
+    color: { primary: '#C97B8A', accent: '#E8B7C0', shadow: 'rgba(201,123,138,0.3)' },
+    variants: [{ size: '250 ml aprox.', tier: 'AAA', price: 20000, stock: 100 }],
+    imageUrl: '/images/products/vaso-1.png',
+    gallery: [
+      '/images/products/vaso-1.png',
+      '/images/products/vaso-2.png',
+    ],
+    featured: true,
+  },
+  {
+    id: 'tazon-bambu-bebe',
+    name: 'Tazón de Bambú con Base Antideslizante + Cuchara',
+    brand: 'Nova Import',
+    type: 'bebe',
+    family: 'Vajilla infantil',
+    gender: 'Unisex',
+    notes: 'Bambú natural · Base de silicona con succión · Cuchara incluida · Apto lavavajillas',
+    description: 'Tazón de bambú natural con base de silicona antideslizante que se adhiere a la mesa o bandeja del bebé. Incluye cuchara de bambú con punta de silicona suave. Material 100% natural y libre de tóxicos. Apto para lavavajillas (220°C). Perfecto para la alimentación complementaria.',
+    color: { primary: '#A87B4E', accent: '#3E9EE0', shadow: 'rgba(168,123,78,0.3)' },
+    variants: [{ size: 'Tazón + cuchara', tier: 'AAA', price: 40000, stock: 100 }],
+    imageUrl: '/images/products/tazon-1.png',
+    gallery: [
+      '/images/products/tazon-1.png',
+      '/images/products/tazon-2.png',
+      '/images/products/tazon-3.png',
+      '/images/products/tazon-4.png',
+    ],
+    featured: true,
+    bestseller: true,
+  },
+  {
+    id: 'pack-esencial-bebe',
+    name: 'Pack Esencial para Bebé · Nova Import',
+    brand: 'Nova Import',
+    type: 'bebe',
+    family: 'Pack combo',
+    gender: 'Unisex',
+    notes: 'Spinners x3 + Vaso con pitillo + Tazón de bambú · Ahorra comprando el combo',
+    description: 'Combo esencial Nova Import: incluye el Set X3 Spinners Sensoriales, el Vaso Infantil con Pitillo y el Tazón de Bambú con cuchara. Todo lo que necesitas para alimentación y juego del bebé en un solo pack con precio especial. Comprando el combo ahorras frente a la compra individual.',
+    color: { primary: '#FF6B6B', accent: '#FFB84C', shadow: 'rgba(255,107,107,0.3)' },
+    variants: [{ size: 'Pack combo (3 productos)', tier: 'AAA', price: 60000, stock: 100 }],
+    imageUrl: '/images/products/pack-bebe.png',
+    gallery: [
+      '/images/products/pack-bebe.png',
+      '/images/products/spinner-1.png',
+      '/images/products/vaso-1.png',
+      '/images/products/tazon-1.png',
+    ],
+    featured: true,
+    bestseller: true,
+  },
+  // ============================================================
+  // PRODUCTOS — MASCOTAS
+  // ============================================================
+  {
+    id: 'pads-perros',
+    name: 'Pads Entrenadores Absorbentes para Perros · 60x60 cm · x40 unidades',
+    brand: 'Nova Import',
+    type: 'mascotas',
+    family: 'Entrenamiento',
+    gender: 'Unisex',
+    notes: 'Súper absorbentes · 60x60 cm · 40 unidades · Anti-fugas laterales · Algodón suave',
+    description: 'Pads entrenadores ultra absorbentes con tecnología de bloqueo de agua de larga duración y barrera anti-fugas laterales. Cubierta superior de algodón super suave para máximo confort. Tamaño grande 60x60 cm, pack de 40 unidades. Ideales para cachorros en entrenamiento, perros adultos, mascotas mayores o uso en jaulas y transportines.',
+    color: { primary: '#3E5C76', accent: '#E63946', shadow: 'rgba(62,92,118,0.3)' },
+    variants: [{ size: '60x60 cm · 40 uds.', tier: 'AAA', price: 40000, stock: 100 }],
+    imageUrl: '/images/products/pads-1.png',
+    gallery: [
+      '/images/products/pads-1.png',
+      '/images/products/pads-2.png',
+    ],
+    featured: true,
+  },
+  // ============================================================
+  // PRODUCTOS — HOGAR
+  // ============================================================
+  {
+    id: 'estantes-bano-set5',
+    name: 'Set X5 Estantes Organizadores para Baño · Acero Inoxidable Negro',
+    brand: 'Nova Import',
+    type: 'hogar',
+    family: 'Organización baño',
+    gender: 'Unisex',
+    notes: 'Set de 5 piezas · Acero inoxidable · Adhesivo de pared sin taladrar · Diseño negro mate',
+    description: 'Set de 5 estantes organizadores en acero inoxidable con acabado negro mate. Incluye diferentes tamaños y formatos (con ganchos para colgar, repisas planas y porta-cepillos). Sistema de adhesivo de pared resistente — no requiere taladrar. Ideal para baño, cocina o lavadero. Soportan hasta 5 kg cada uno.',
+    color: { primary: '#1A1A1A', accent: '#0A2540', shadow: 'rgba(26,26,26,0.4)' },
+    variants: [{ size: 'Set x5 piezas', tier: 'AAA', price: 60000, stock: 100 }],
+    imageUrl: '/images/products/estantes-1.png',
+    gallery: [
+      '/images/products/estantes-1.png',
+      '/images/products/estantes-2.png',
+      '/images/products/estantes-3.png',
+    ],
+    featured: true,
+    bestseller: true,
+  },
 ];
 
 const BRANDS = ['Lattafa', 'Armaf', 'Afnan', 'Bharara'];
@@ -986,10 +1114,10 @@ const Marquee = () => (
 const Header = ({ onNavigate, currentView, cartCount, onCartOpen }) => {
   const [open, setOpen] = useState(false);
   const links = [
-    { id: 'catalog-hombre', label: 'Hombre' },
-    { id: 'catalog-mujer', label: 'Mujer' },
-    { id: 'catalog-arabe', label: 'Marcas árabes' },
-    { id: 'catalog-inspirado', label: 'Inspirados' },
+    { id: 'catalog-bebe', label: 'Bebé' },
+    { id: 'catalog-mascotas', label: 'Mascotas' },
+    { id: 'catalog-hogar', label: 'Hogar' },
+    { id: 'catalog-arabe', label: 'Perfumería' },
     { id: 'catalog-bestsellers', label: 'Más vendidos', highlight: true },
     { id: 'maison', label: 'Nosotros' },
   ];
@@ -1252,10 +1380,10 @@ const Home = ({ onNavigate, onSelectProduct }) => {
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-              { id: 'catalog-hombre', label: 'PARA ÉL', sub: 'Aromáticos · Cuero · Cítricos', color: C.navy },
-              { id: 'catalog-mujer', label: 'PARA ELLA', sub: 'Florales · Frutales · Dulces', color: '#A8475C' },
-              { id: 'catalog-arabe', label: 'MARCAS ÁRABES', sub: 'Lattafa · Armaf · Afnan', color: C.orange },
-              { id: 'catalog-inspirado', label: 'INSPIRADOS', sub: 'Familia olfativa premium', color: '#2A6B4A' },
+              { id: 'catalog-bebe', label: 'BEBÉ', sub: 'Vajilla · Juguetes · Esenciales', color: '#A8475C' },
+              { id: 'catalog-mascotas', label: 'MASCOTAS', sub: 'Entrenamiento · Cuidado', color: '#2A6B4A' },
+              { id: 'catalog-hogar', label: 'HOGAR', sub: 'Organización · Baño · Cocina', color: C.navy },
+              { id: 'catalog-arabe', label: 'PERFUMERÍA', sub: 'Árabes · Inspirados premium', color: C.orange },
             ].map(c => (
               <button key={c.id} onClick={() => onNavigate(c.id)} className="aspect-[4/5] lg:aspect-[3/4] relative overflow-hidden group" style={{ background: c.color }}>
                 <div className="absolute inset-0 opacity-90 group-hover:opacity-100 transition-opacity" style={{ background: `linear-gradient(180deg, ${c.color}DD 0%, ${c.color} 100%)` }} />
@@ -1442,6 +1570,9 @@ const Catalog = ({ initialFilter = {}, onSelectProduct, title = 'Catálogo compl
               { v: 'todos', l: 'Todos' },
               { v: 'arabe', l: 'Marcas árabes' },
               { v: 'inspirado', l: 'Inspirados' },
+              { v: 'bebe', l: 'Bebé' },
+              { v: 'mascotas', l: 'Mascotas' },
+              { v: 'hogar', l: 'Hogar' },
             ]},
             { key: 'brand', label: 'Marca', opts: ['todos', ...BRANDS] },
           ].map(f => (
@@ -1499,7 +1630,7 @@ const Catalog = ({ initialFilter = {}, onSelectProduct, title = 'Catálogo compl
 // PRODUCT DETAIL
 // ============================================================
 const ProductDetail = ({ product, onBack, onAddToCart, onWhatsAppBuy, onSelectProduct }) => {
-  const [activeImage, setActiveImage] = useState('product');
+  const [activeImage, setActiveImage] = useState(0);
   const [selectedVariant, setSelectedVariant] = useState(product.variants[0]);
   const [qty, setQty] = useState(1);
   const [added, setAdded] = useState(false);
@@ -1537,43 +1668,56 @@ const ProductDetail = ({ product, onBack, onAddToCart, onWhatsAppBuy, onSelectPr
       
       <section className="pb-16">
         <div className="max-w-[1400px] mx-auto px-4 lg:px-8 grid lg:grid-cols-2 gap-8 lg:gap-12">
-          {/* Left: image gallery (perfume + tamaños) */}
+          {/* Left: image gallery */}
           <div>
-            <div className="bg-white border" style={{ borderColor: '#E5E5E0' }}>
-              {activeImage === 'tamanos' ? (
-                <div className="relative aspect-square bg-white overflow-hidden flex items-center justify-center">
-                  <img
-                    src="/images/products/tamanos-disponibles.png"
-                    alt="Tamaños disponibles"
-                    className="relative max-w-[95%] max-h-[95%] object-contain"
-                  />
-                </div>
-              ) : (
-                <ProductImage product={product} aspect="aspect-square" />
-              )}
-            </div>
-            <div className="grid grid-cols-2 gap-2 mt-2">
-              <button
-                type="button"
-                onClick={() => setActiveImage('product')}
-                className="aspect-square bg-white border cursor-pointer hover:border-orange-500 transition-colors"
-                style={{ borderColor: activeImage === 'product' ? '#F58220' : '#E5E5E0' }}
-              >
-                <ProductImage product={product} aspect="aspect-square" />
-              </button>
-              <button
-                type="button"
-                onClick={() => setActiveImage('tamanos')}
-                className="aspect-square bg-white border cursor-pointer hover:border-orange-500 transition-colors flex items-center justify-center p-2"
-                style={{ borderColor: activeImage === 'tamanos' ? '#F58220' : '#E5E5E0' }}
-              >
-                <img
-                  src="/images/products/tamanos-disponibles.png"
-                  alt="Tamaños disponibles"
-                  className="max-w-full max-h-full object-contain"
-                />
-              </button>
-            </div>
+            {(() => {
+              const isPerfume = product.type === 'arabe' || product.type === 'inspirado';
+              const galleryImages = product.gallery && product.gallery.length > 0
+                ? product.gallery
+                : isPerfume
+                  ? [product.imageUrl, '/images/products/tamanos-disponibles.png'].filter(Boolean)
+                  : product.imageUrl ? [product.imageUrl] : [];
+              const activeIdx = typeof activeImage === 'number' ? activeImage : 0;
+              const safeIdx = Math.min(activeIdx, Math.max(galleryImages.length - 1, 0));
+              const mainSrc = galleryImages[safeIdx];
+              return (
+                <>
+                  <div className="bg-white border" style={{ borderColor: '#E5E5E0' }}>
+                    {mainSrc ? (
+                      <div className="relative aspect-square bg-white overflow-hidden flex items-center justify-center">
+                        <img
+                          src={mainSrc}
+                          alt={product.name}
+                          className="relative max-w-[95%] max-h-[95%] object-contain"
+                          style={{ filter: isPerfume && safeIdx === galleryImages.length - 1 && mainSrc.includes('tamanos') ? 'none' : `drop-shadow(0 20px 30px ${product.color.shadow})` }}
+                        />
+                      </div>
+                    ) : (
+                      <ProductImage product={product} aspect="aspect-square" />
+                    )}
+                  </div>
+                  {galleryImages.length > 1 && (
+                    <div className={`grid gap-2 mt-2 ${galleryImages.length === 2 ? 'grid-cols-2' : galleryImages.length === 3 ? 'grid-cols-3' : 'grid-cols-4'}`}>
+                      {galleryImages.map((src, i) => (
+                        <button
+                          key={i}
+                          type="button"
+                          onClick={() => setActiveImage(i)}
+                          className="aspect-square bg-white border cursor-pointer hover:border-orange-500 transition-colors flex items-center justify-center p-2"
+                          style={{ borderColor: safeIdx === i ? '#F58220' : '#E5E5E0' }}
+                        >
+                          <img
+                            src={src}
+                            alt={`${product.name} ${i + 1}`}
+                            className="max-w-full max-h-full object-contain"
+                          />
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </>
+              );
+            })()}
           </div>
           
           {/* Right: info */}
@@ -2173,10 +2317,11 @@ const Footer = ({ onNavigate }) => (
         <div>
           <div className="f-archivo font-bold text-white text-sm mb-3 tracking-wider">CATÁLOGO</div>
           <ul className="space-y-2 text-sm">
-            <li><button onClick={() => onNavigate('catalog-hombre')} className="hover:text-white">Hombre</button></li>
-            <li><button onClick={() => onNavigate('catalog-mujer')} className="hover:text-white">Mujer</button></li>
-            <li><button onClick={() => onNavigate('catalog-arabe')} className="hover:text-white">Marcas árabes</button></li>
-            <li><button onClick={() => onNavigate('catalog-inspirado')} className="hover:text-white">Inspirados</button></li>
+            <li><button onClick={() => onNavigate('catalog-bebe')} className="hover:text-white">Bebé</button></li>
+            <li><button onClick={() => onNavigate('catalog-mascotas')} className="hover:text-white">Mascotas</button></li>
+            <li><button onClick={() => onNavigate('catalog-hogar')} className="hover:text-white">Hogar</button></li>
+            <li><button onClick={() => onNavigate('catalog-arabe')} className="hover:text-white">Perfumería árabe</button></li>
+            <li><button onClick={() => onNavigate('catalog-inspirado')} className="hover:text-white">Esencias inspiradas</button></li>
             <li><button onClick={() => onNavigate('catalog-bestsellers')} className="hover:text-white">Más vendidos</button></li>
           </ul>
         </div>
@@ -2319,6 +2464,9 @@ export default function App() {
   
   const renderView = () => {
     if (view === 'catalog') return <Catalog onSelectProduct={selectProduct} />;
+    if (view === 'catalog-bebe') return <Catalog initialFilter={{ type: 'bebe' }} title="Productos para bebé" onSelectProduct={selectProduct} />;
+    if (view === 'catalog-mascotas') return <Catalog initialFilter={{ type: 'mascotas' }} title="Productos para mascotas" onSelectProduct={selectProduct} />;
+    if (view === 'catalog-hogar') return <Catalog initialFilter={{ type: 'hogar' }} title="Productos para el hogar" onSelectProduct={selectProduct} />;
     if (view === 'catalog-hombre') return <Catalog initialFilter={{ gender: 'Hombre' }} title="Fragancias para él" onSelectProduct={selectProduct} />;
     if (view === 'catalog-mujer') return <Catalog initialFilter={{ gender: 'Mujer' }} title="Fragancias para ella" onSelectProduct={selectProduct} />;
     if (view === 'catalog-arabe') return <Catalog initialFilter={{ type: 'arabe' }} title="Marcas árabes 100% originales" onSelectProduct={selectProduct} />;
