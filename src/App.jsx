@@ -561,7 +561,11 @@ const PRODUCTS = [
       { size: '100ml', tier: 'AA', price: 90000, stock: 8 },
       { size: '100ml', tier: 'AAA', price: 180000, stock: 5 },
     ],
-    imageUrl: '',
+    imageUrl: '/images/products/insp-ombrenomade.jpg',
+    gallery: [
+      '/images/products/insp-ombrenomade.jpg',
+      '/images/products/tamanos-disponibles.png',
+    ],
     featured: true,
   },
   {
@@ -637,7 +641,11 @@ const PRODUCTS = [
       { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
       { size: '100ml', tier: 'AA', price: 75000, stock: 12 },
     ],
-    imageUrl: '',
+    imageUrl: '/images/products/insp-montblanc-legend.jpg',
+    gallery: [
+      '/images/products/insp-montblanc-legend.jpg',
+      '/images/products/tamanos-disponibles.png',
+    ],
   },
   {
     id: 'insp-diesel-plus',
@@ -997,7 +1005,11 @@ const PRODUCTS = [
       { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
       { size: '100ml', tier: 'AA', price: 75000, stock: 12 },
     ],
-    imageUrl: '',
+    imageUrl: '/images/products/insp-club-nuit-intense.jpg',
+    gallery: [
+      '/images/products/insp-club-nuit-intense.jpg',
+      '/images/products/tamanos-disponibles.png',
+    ],
   },
   {
     id: 'insp-leau-issey',
@@ -1014,7 +1026,11 @@ const PRODUCTS = [
       { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
       { size: '100ml', tier: 'AA', price: 75000, stock: 12 },
     ],
-    imageUrl: '',
+    imageUrl: '/images/products/insp-leau-issey.jpg',
+    gallery: [
+      '/images/products/insp-leau-issey.jpg',
+      '/images/products/tamanos-disponibles.png',
+    ],
   },
   {
     id: 'insp-perry-380',
@@ -1031,7 +1047,11 @@ const PRODUCTS = [
       { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
       { size: '100ml', tier: 'AA', price: 75000, stock: 12 },
     ],
-    imageUrl: '',
+    imageUrl: '/images/products/insp-perry-380.jpg',
+    gallery: [
+      '/images/products/insp-perry-380.jpg',
+      '/images/products/tamanos-disponibles.png',
+    ],
   },
   {
     id: 'insp-hugo-boss-iced',
@@ -1048,7 +1068,11 @@ const PRODUCTS = [
       { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
       { size: '100ml', tier: 'AA', price: 75000, stock: 12 },
     ],
-    imageUrl: '',
+    imageUrl: '/images/products/insp-hugo-boss-iced.jpg',
+    gallery: [
+      '/images/products/insp-hugo-boss-iced.jpg',
+      '/images/products/tamanos-disponibles.png',
+    ],
   },
   {
     id: 'insp-blue-seduction',
@@ -1065,7 +1089,11 @@ const PRODUCTS = [
       { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
       { size: '100ml', tier: 'AA', price: 75000, stock: 12 },
     ],
-    imageUrl: '',
+    imageUrl: '/images/products/insp-blue-seduction.jpg',
+    gallery: [
+      '/images/products/insp-blue-seduction.jpg',
+      '/images/products/tamanos-disponibles.png',
+    ],
   },
   {
     id: 'insp-paris-hilton',
@@ -1082,7 +1110,11 @@ const PRODUCTS = [
       { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
       { size: '100ml', tier: 'AA', price: 75000, stock: 12 },
     ],
-    imageUrl: '',
+    imageUrl: '/images/products/insp-paris-hilton.jpg',
+    gallery: [
+      '/images/products/insp-paris-hilton.jpg',
+      '/images/products/tamanos-disponibles.png',
+    ],
   },
   {
     id: 'insp-lapidus',
@@ -1099,7 +1131,11 @@ const PRODUCTS = [
       { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
       { size: '100ml', tier: 'AA', price: 75000, stock: 12 },
     ],
-    imageUrl: '',
+    imageUrl: '/images/products/insp-lapidus.jpg',
+    gallery: [
+      '/images/products/insp-lapidus.jpg',
+      '/images/products/tamanos-disponibles.png',
+    ],
   },
   {
     id: 'insp-lacoste-red',
@@ -1116,7 +1152,11 @@ const PRODUCTS = [
       { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
       { size: '100ml', tier: 'AA', price: 75000, stock: 12 },
     ],
-    imageUrl: '',
+    imageUrl: '/images/products/insp-lacoste-red.jpg',
+    gallery: [
+      '/images/products/insp-lacoste-red.jpg',
+      '/images/products/tamanos-disponibles.png',
+    ],
   },
   {
     id: 'insp-starwalker',
@@ -1133,7 +1173,11 @@ const PRODUCTS = [
       { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
       { size: '103ml', tier: 'AA', price: 78000, stock: 12 },
     ],
-    imageUrl: '',
+    imageUrl: '/images/products/insp-starwalker.jpg',
+    gallery: [
+      '/images/products/insp-starwalker.jpg',
+      '/images/products/tamanos-disponibles.png',
+    ],
   },
   {
     id: 'insp-tommy-hilfiger',
@@ -1150,7 +1194,11 @@ const PRODUCTS = [
       { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
       { size: '94ml', tier: 'AA', price: 72000, stock: 12 },
     ],
-    imageUrl: '',
+    imageUrl: '/images/products/insp-tommy-hilfiger.jpg',
+    gallery: [
+      '/images/products/insp-tommy-hilfiger.jpg',
+      '/images/products/tamanos-disponibles.png',
+    ],
   },
   {
     id: 'insp-toy-boy',
@@ -1167,7 +1215,11 @@ const PRODUCTS = [
       { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
       { size: '100ml', tier: 'AA', price: 75000, stock: 12 },
     ],
-    imageUrl: '',
+    imageUrl: '/images/products/insp-toy-boy.jpg',
+    gallery: [
+      '/images/products/insp-toy-boy.jpg',
+      '/images/products/tamanos-disponibles.png',
+    ],
   },
   {
     id: 'insp-lacoste-blanca',
@@ -1184,7 +1236,11 @@ const PRODUCTS = [
       { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
       { size: '140ml', tier: 'AA', price: 88000, stock: 12 },
     ],
-    imageUrl: '',
+    imageUrl: '/images/products/insp-lacoste-blanca.jpg',
+    gallery: [
+      '/images/products/insp-lacoste-blanca.jpg',
+      '/images/products/tamanos-disponibles.png',
+    ],
   },
   {
     id: 'insp-hugo-red',
@@ -1201,7 +1257,11 @@ const PRODUCTS = [
       { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
       { size: '100ml', tier: 'AA', price: 75000, stock: 12 },
     ],
-    imageUrl: '',
+    imageUrl: '/images/products/insp-hugo-red.jpg',
+    gallery: [
+      '/images/products/insp-hugo-red.jpg',
+      '/images/products/tamanos-disponibles.png',
+    ],
   },
   {
     id: 'insp-jean-pascal',
@@ -1218,7 +1278,11 @@ const PRODUCTS = [
       { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
       { size: '100ml', tier: 'AA', price: 75000, stock: 12 },
     ],
-    imageUrl: '',
+    imageUrl: '/images/products/insp-jean-pascal.jpg',
+    gallery: [
+      '/images/products/insp-jean-pascal.jpg',
+      '/images/products/tamanos-disponibles.png',
+    ],
   },
   {
     id: 'insp-odyssey-manager',
@@ -1235,7 +1299,11 @@ const PRODUCTS = [
       { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
       { size: '100ml', tier: 'AA', price: 75000, stock: 12 },
     ],
-    imageUrl: '',
+    imageUrl: '/images/products/insp-odyssey-manager.jpg',
+    gallery: [
+      '/images/products/insp-odyssey-manager.jpg',
+      '/images/products/tamanos-disponibles.png',
+    ],
   },
   {
     id: 'insp-bharara-king',
@@ -1252,7 +1320,11 @@ const PRODUCTS = [
       { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
       { size: '100ml', tier: 'AA', price: 75000, stock: 12 },
     ],
-    imageUrl: '',
+    imageUrl: '/images/products/insp-bharara-king.jpg',
+    gallery: [
+      '/images/products/insp-bharara-king.jpg',
+      '/images/products/tamanos-disponibles.png',
+    ],
   },
   {
     id: 'insp-erba-pura',
@@ -1269,7 +1341,11 @@ const PRODUCTS = [
       { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
       { size: '100ml', tier: 'AA', price: 75000, stock: 12 },
     ],
-    imageUrl: '',
+    imageUrl: '/images/products/insp-erba-pura.jpg',
+    gallery: [
+      '/images/products/insp-erba-pura.jpg',
+      '/images/products/tamanos-disponibles.png',
+    ],
   },
   {
     id: 'insp-il-femme-lumin',
@@ -1286,7 +1362,11 @@ const PRODUCTS = [
       { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
       { size: '100ml', tier: 'AA', price: 75000, stock: 12 },
     ],
-    imageUrl: '',
+    imageUrl: '/images/products/insp-il-femme-lumin.jpg',
+    gallery: [
+      '/images/products/insp-il-femme-lumin.jpg',
+      '/images/products/tamanos-disponibles.png',
+    ],
   },
   {
     id: 'insp-silver-mountain',
@@ -1303,7 +1383,11 @@ const PRODUCTS = [
       { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
       { size: '100ml', tier: 'AA', price: 75000, stock: 12 },
     ],
-    imageUrl: '',
+    imageUrl: '/images/products/insp-silver-mountain.jpg',
+    gallery: [
+      '/images/products/insp-silver-mountain.jpg',
+      '/images/products/tamanos-disponibles.png',
+    ],
   },
   {
     id: 'insp-his-confession',
@@ -1320,7 +1404,11 @@ const PRODUCTS = [
       { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
       { size: '100ml', tier: 'AA', price: 75000, stock: 12 },
     ],
-    imageUrl: '',
+    imageUrl: '/images/products/insp-his-confession.jpg',
+    gallery: [
+      '/images/products/insp-his-confession.jpg',
+      '/images/products/tamanos-disponibles.png',
+    ],
   },
   {
     id: 'insp-ck-one',
@@ -1337,7 +1425,11 @@ const PRODUCTS = [
       { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
       { size: '100ml', tier: 'AA', price: 75000, stock: 12 },
     ],
-    imageUrl: '',
+    imageUrl: '/images/products/insp-ck-one.jpg',
+    gallery: [
+      '/images/products/insp-ck-one.jpg',
+      '/images/products/tamanos-disponibles.png',
+    ],
   },
 ];
 
