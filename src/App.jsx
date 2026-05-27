@@ -3183,7 +3183,23 @@ const Catalog = ({ initialFilter = {}, onSelectProduct, title = 'Catálogo compl
     return true;
   });
 
-  const availableBrands = [...new Set(lockedProducts.map(p => p.brand).filter(b => b && BRANDS.includes(b)))];
+  // Extrae la marca de un producto: usa p.brand si existe, si no extrae de p.inspiredBy
+  // Reconoce marcas compuestas (Jean Paul Gaultier, Yves Saint Laurent, etc.)
+  const KNOWN_COMPOUND_BRANDS = [
+    'Jean Paul Gaultier', 'Yves Saint Laurent', 'Paco Rabanne', 'Carolina Herrera',
+    'Maison Francis Kurkdjian', 'Parfums de Marly', 'Bond No. 9', 'Hugo Boss',
+    'Ralph Lauren', 'Britney Spears', 'Ariana Grande', 'Paris Hilton',
+    'Perry Ellis', 'Tommy Hilfiger', 'Dolce & Gabbana',
+  ];
+  const extractBrand = (p) => {
+    if (p.brand) return p.brand;
+    if (!p.inspiredBy) return null;
+    for (const b of KNOWN_COMPOUND_BRANDS) {
+      if (p.inspiredBy.startsWith(b)) return b;
+    }
+    return p.inspiredBy.split(' ')[0];
+  };
+  const availableBrands = [...new Set(lockedProducts.map(extractBrand).filter(Boolean))].sort();
   const availableFamilies = [...new Set(lockedProducts.map(p => p.family).filter(Boolean))];
   const availableGenders = [...new Set(lockedProducts.map(p => p.gender).filter(Boolean))];
 
@@ -3209,7 +3225,7 @@ const Catalog = ({ initialFilter = {}, onSelectProduct, title = 'Catálogo compl
   let products = baseProducts.filter(p => {
     if (filters.gender !== 'todos' && p.gender !== filters.gender && p.gender !== 'Unisex') return false;
     if (filters.type !== 'todos' && p.type !== filters.type) return false;
-    if (filters.brand !== 'todos' && p.brand !== filters.brand) return false;
+    if (filters.brand !== 'todos' && extractBrand(p) !== filters.brand) return false;
     if (filters.family !== 'todos' && p.family !== filters.family) return false;
     return true;
   });
@@ -4139,7 +4155,13 @@ const CookieBanner = ({ onClose }) => (
 // APP
 // ============================================================
 export default function App() {
-  const [view, setView] = useState('home');
+  // Lee view inicial desde la URL (ej. /catalog-mujer → 'catalog-mujer'). Default: 'home'.
+  const readViewFromPath = () => {
+    if (typeof window === 'undefined') return 'home';
+    const p = window.location.pathname.replace(/^\//,'').replace(/\/$/, '');
+    return p || 'home';
+  };
+  const [view, setView] = useState(readViewFromPath);
   const [selectedId, setSelectedId] = useState(null);
   const [cart, setCart] = useState([]);
   const [cartOpen, setCartOpen] = useState(false);
@@ -4164,6 +4186,12 @@ export default function App() {
   useEffect(() => {
     try { window.localStorage.setItem('cart_nova', JSON.stringify(cart)); } catch (e) {}
   }, [cart]);
+  // Escucha back/forward del browser para sincronizar el view con la URL
+  useEffect(() => {
+    const onPop = () => setView(readViewFromPath());
+    window.addEventListener('popstate', onPop);
+    return () => window.removeEventListener('popstate', onPop);
+  }, []);
   
   const navigate = (v) => {
     if (typeof v === 'object' && v !== null && v.view === 'search') {
@@ -4176,6 +4204,13 @@ export default function App() {
     setView(v);
     if (v !== 'product') setSelectedId(null);
     if (v !== 'search') setSearchQuery('');
+    // Actualiza la URL del browser para que tenga URLs compartibles
+    try {
+      const path = v === 'home' ? '/' : '/' + v;
+      if (window.location.pathname !== path) {
+        window.history.pushState({ view: v }, '', path);
+      }
+    } catch (e) {}
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
   
