@@ -85,7 +85,9 @@ const PRODUCTS = [
       { size: '100ml', tier: 'AA', price: 80000, stock: 12 },
       { size: '100ml', tier: 'AAA', price: 160000, stock: 6 },
     ],
-    imageUrl: '/images/products/khamrah.png',
+    imageUrl: '/images/products/arabes/khamrah.jpg',
+
+    gallery: ['/images/products/arabes/khamrah.jpg', '/images/products/tamanos-disponibles.png'],
     featured: true,
     bestseller: true,
   },
@@ -106,7 +108,9 @@ const PRODUCTS = [
       { size: '100ml', tier: 'AA', price: 80000, stock: 12 },
       { size: '100ml', tier: 'AAA', price: 160000, stock: 6 },
     ],
-    imageUrl: '/images/products/khamrah-qahwa.png',
+    imageUrl: '/images/products/arabes/khamrah-qahwa.jpg',
+
+    gallery: ['/images/products/arabes/khamrah-qahwa.jpg', '/images/products/tamanos-disponibles.png'],
     featured: true,
   },
   {
@@ -126,8 +130,9 @@ const PRODUCTS = [
       { size: '100ml', tier: 'AA', price: 80000, stock: 12 },
       { size: '100ml', tier: 'AAA', price: 160000, stock: 6 },
     ],
-    imageUrl: '/images/products/khamrah-dukhan.png',
-  },
+    imageUrl: '/images/products/arabes/khamrah-dukhan.jpg',
+
+    gallery: ['/images/products/arabes/khamrah-dukhan.jpg', '/images/products/tamanos-disponibles.png'],  },
   {
     id: 'bade-al-oud-sublime',
     name: "Bade'e Al Oud Sublime",
@@ -145,7 +150,9 @@ const PRODUCTS = [
       { size: '100ml', tier: 'AA', price: 80000, stock: 12 },
       { size: '100ml', tier: 'AAA', price: 160000, stock: 6 },
     ],
-    imageUrl: '/images/products/bade-al-oud-sublime.png',
+    imageUrl: '/images/products/arabes/bade-al-oud-sublime.jpg',
+
+    gallery: ['/images/products/arabes/bade-al-oud-sublime.jpg', '/images/products/tamanos-disponibles.png'],
     featured: true,
   },
   {
@@ -165,7 +172,9 @@ const PRODUCTS = [
       { size: '100ml', tier: 'AA', price: 80000, stock: 12 },
       { size: '100ml', tier: 'AAA', price: 160000, stock: 6 },
     ],
-    imageUrl: '/images/products/bade-al-oud-glory.png',
+    imageUrl: '/images/products/arabes/bade-al-oud-glory.jpg',
+
+    gallery: ['/images/products/arabes/bade-al-oud-glory.jpg', '/images/products/tamanos-disponibles.png'],
     featured: true,
   },
   {
@@ -185,8 +194,9 @@ const PRODUCTS = [
       { size: '100ml', tier: 'AA', price: 80000, stock: 12 },
       { size: '100ml', tier: 'AAA', price: 160000, stock: 6 },
     ],
-    imageUrl: '/images/products/asad.png',
-  },
+    imageUrl: '/images/products/arabes/asad.jpg',
+
+    gallery: ['/images/products/arabes/asad.jpg', '/images/products/tamanos-disponibles.png'],  },
   {
     id: 'asad-bourbon',
     name: 'Asad Bourbon',
@@ -204,8 +214,9 @@ const PRODUCTS = [
       { size: '100ml', tier: 'AA', price: 80000, stock: 12 },
       { size: '100ml', tier: 'AAA', price: 160000, stock: 6 },
     ],
-    imageUrl: '/images/products/asad-bourbon.png',
-  },
+    imageUrl: '/images/products/arabes/asad-bourbon.jpg',
+
+    gallery: ['/images/products/arabes/asad-bourbon.jpg', '/images/products/tamanos-disponibles.png'],  },
   {
     id: 'club-nuit-intense',
     name: 'Club de Nuit Intense Man',
@@ -223,7 +234,9 @@ const PRODUCTS = [
       { size: '100ml', tier: 'AA', price: 80000, stock: 12 },
       { size: '100ml', tier: 'AAA', price: 160000, stock: 6 },
     ],
-    imageUrl: '/images/products/club-nuit-intense.png',
+    imageUrl: '/images/products/arabes/club-nuit-intense.jpg',
+
+    gallery: ['/images/products/arabes/club-nuit-intense.jpg', '/images/products/tamanos-disponibles.png'],
     bestseller: true,
   },
   {
@@ -243,8 +256,9 @@ const PRODUCTS = [
       { size: '100ml', tier: 'AA', price: 80000, stock: 12 },
       { size: '100ml', tier: 'AAA', price: 160000, stock: 6 },
     ],
-    imageUrl: '/images/products/9pm.png',
-  },
+    imageUrl: '/images/products/arabes/9pm.jpg',
+
+    gallery: ['/images/products/arabes/9pm.jpg', '/images/products/tamanos-disponibles.png'],  },
   {
     id: 'bharara-king',
     name: 'Bharara King',
@@ -262,8 +276,9 @@ const PRODUCTS = [
       { size: '100ml', tier: 'AA', price: 80000, stock: 12 },
       { size: '100ml', tier: 'AAA', price: 160000, stock: 6 },
     ],
-    imageUrl: '/images/products/bharara-king.png',
-  },
+    imageUrl: '/images/products/arabes/bharara-king.jpg',
+
+    gallery: ['/images/products/arabes/bharara-king.jpg', '/images/products/tamanos-disponibles.png'],  },
   {
     id: 'bharara-bleu',
     name: 'Bharara Bleu',
@@ -281,8 +296,9 @@ const PRODUCTS = [
       { size: '100ml', tier: 'AA', price: 80000, stock: 12 },
       { size: '100ml', tier: 'AAA', price: 160000, stock: 6 },
     ],
-    imageUrl: '/images/products/bharara-bleu.png',
-  },
+    imageUrl: '/images/products/arabes/bharara-bleu.jpg',
+
+    gallery: ['/images/products/arabes/bharara-bleu.jpg', '/images/products/tamanos-disponibles.png'],  },
   {
     id: 'amber-rouge',
     name: 'Amber Rouge',
@@ -300,7 +316,9 @@ const PRODUCTS = [
       { size: '100ml', tier: 'AA', price: 80000, stock: 12 },
       { size: '100ml', tier: 'AAA', price: 160000, stock: 6 },
     ],
-    imageUrl: '/images/products/amber-rouge.png',
+    imageUrl: '/images/products/arabes/amber-rouge.jpg',
+
+    gallery: ['/images/products/arabes/amber-rouge.jpg', '/images/products/tamanos-disponibles.png'],
     featured: true,
   },
   {
@@ -320,8 +338,9 @@ const PRODUCTS = [
       { size: '100ml', tier: 'AA', price: 80000, stock: 12 },
       { size: '100ml', tier: 'AAA', price: 160000, stock: 6 },
     ],
-    imageUrl: '/images/products/art-of-universe.png',
-  },
+    imageUrl: '/images/products/arabes/art-of-universe.jpg',
+
+    gallery: ['/images/products/arabes/art-of-universe.jpg', '/images/products/tamanos-disponibles.png'],  },
   {
     id: 'emeer',
     name: 'Emeer',
@@ -339,8 +358,9 @@ const PRODUCTS = [
       { size: '100ml', tier: 'AA', price: 80000, stock: 12 },
       { size: '100ml', tier: 'AAA', price: 160000, stock: 6 },
     ],
-    imageUrl: '/images/products/emeer.png',
-  },
+    imageUrl: '/images/products/arabes/emeer.jpg',
+
+    gallery: ['/images/products/arabes/emeer.jpg', '/images/products/tamanos-disponibles.png'],  },
   {
     id: 'his-confession',
     name: 'His Confession',
@@ -358,8 +378,9 @@ const PRODUCTS = [
       { size: '100ml', tier: 'AA', price: 80000, stock: 12 },
       { size: '100ml', tier: 'AAA', price: 160000, stock: 6 },
     ],
-    imageUrl: '/images/products/his-confession.png',
-  },
+    imageUrl: '/images/products/arabes/his-confession.jpg',
+
+    gallery: ['/images/products/arabes/his-confession.jpg', '/images/products/tamanos-disponibles.png'],  },
   {
     id: 'odyssey-mandarin',
     name: 'Odyssey Mandarin Sky',
@@ -377,8 +398,9 @@ const PRODUCTS = [
       { size: '100ml', tier: 'AA', price: 80000, stock: 12 },
       { size: '100ml', tier: 'AAA', price: 160000, stock: 6 },
     ],
-    imageUrl: '/images/products/odyssey-mandarin.png',
-  },
+    imageUrl: '/images/products/arabes/odyssey-mandarin.jpg',
+
+    gallery: ['/images/products/arabes/odyssey-mandarin.jpg', '/images/products/tamanos-disponibles.png'],  },
   {
     id: 'amber-oud-rouge',
     name: 'Amber Oud Rouge',
@@ -396,8 +418,9 @@ const PRODUCTS = [
       { size: '100ml', tier: 'AA', price: 80000, stock: 12 },
       { size: '100ml', tier: 'AAA', price: 160000, stock: 6 },
     ],
-    imageUrl: '/images/products/amber-oud-rouge.png',
-  },
+    imageUrl: '/images/products/arabes/amber-oud-rouge.jpg',
+
+    gallery: ['/images/products/arabes/amber-oud-rouge.jpg', '/images/products/tamanos-disponibles.png'],  },
   
   // ============================================================
   // LÍNEA ÁMBAR PERFUMERÍA — ESENCIAS INSPIRADAS
@@ -1503,11 +1526,8 @@ const PRODUCTS = [
       { size: '100ml', tier: 'AA', price: 80000, stock: 12 },
       { size: '100ml', tier: 'AAA', price: 160000, stock: 6 },
     ],
-    imageUrl: '/images/products/insp-silver-mountain.jpg',
-    gallery: [
-      '/images/products/insp-silver-mountain.jpg',
-      '/images/products/tamanos-disponibles.png',
-    ],
+    imageUrl: '/images/products/arabes/insp-silver-mountain.jpg',
+    gallery: ['/images/products/arabes/insp-silver-mountain.jpg', '/images/products/tamanos-disponibles.png'],
   },
   {
     id: 'insp-his-confession',
@@ -2752,6 +2772,87 @@ const PRODUCTS = [
     ],
     imageUrl: '/images/products/mujer/insp-la-vie-est-belle-elixir.jpg',
     gallery: ['/images/products/mujer/insp-la-vie-est-belle-elixir.jpg', '/images/products/tamanos-disponibles.png'],
+  },
+
+  {
+    id: 'bade-al-oud-honor',
+    name: "Bade'e Al Oud Honor",
+    brand: 'Lattafa',
+    type: 'arabe',
+    family: 'Floral Oriental',
+    gender: 'Unisex',
+    notes: 'Rosa · Jazmín · Oud · Sándalo · Almizcle · Ámbar',
+    description: "Variación luminosa del icónico Bade'e Al Oud de Lattafa. Floral elegante con un fondo de oud refinado. Producto oriental sofisticado.",
+    color: { primary: '#F0E4D8', accent: '#C9A04D', shadow: 'rgba(201,160,77,0.3)' },
+    variants: [
+      { size: '30ml', tier: 'AA', price: 20000, stock: 20 },
+      { size: '50ml', tier: 'AA', price: 30000, stock: 18 },
+      { size: '75ml', tier: 'AA', price: 40000, stock: 15 },
+      { size: '100ml', tier: 'AA', price: 80000, stock: 12 },
+      { size: '100ml', tier: 'AAA', price: 160000, stock: 6 },
+    ],
+    imageUrl: '/images/products/arabes/bade-al-oud-honor.jpg',
+    gallery: ['/images/products/arabes/bade-al-oud-honor.jpg', '/images/products/tamanos-disponibles.png'],
+  },
+  {
+    id: 'il-femme',
+    name: "Il Femme",
+    brand: 'Ilmin Parfums',
+    type: 'arabe',
+    family: 'Floral Oriental',
+    gender: 'Unisex',
+    notes: 'Rosa · Lichi · Frutos rojos · Pachulí · Almizcle · Maderas suaves',
+    description: "Floral oriental femenino de Ilmin Parfums. Romanticismo árabe con un fondo cremoso y elegante.",
+    color: { primary: '#D86B82', accent: '#F0BDC8', shadow: 'rgba(240,189,200,0.4)' },
+    variants: [
+      { size: '30ml', tier: 'AA', price: 20000, stock: 20 },
+      { size: '50ml', tier: 'AA', price: 30000, stock: 18 },
+      { size: '75ml', tier: 'AA', price: 40000, stock: 15 },
+      { size: '100ml', tier: 'AA', price: 80000, stock: 12 },
+      { size: '100ml', tier: 'AAA', price: 160000, stock: 6 },
+    ],
+    imageUrl: '/images/products/arabes/il-femme.jpg',
+    gallery: ['/images/products/arabes/il-femme.jpg', '/images/products/tamanos-disponibles.png'],
+  },
+  {
+    id: 'ahli-vega',
+    name: "Ahli Vega",
+    brand: 'Lattafa',
+    type: 'arabe',
+    family: 'Oriental Amaderado',
+    gender: 'Unisex',
+    notes: 'Bergamota · Cardamomo · Maderas oscuras · Ámbar · Almizcle · Pachulí',
+    description: "Oriental amaderado de Lattafa con una composición moderna y sofisticada. Calidez árabe con un toque cósmico.",
+    color: { primary: '#1F2D5A', accent: '#C9A04D', shadow: 'rgba(201,160,77,0.3)' },
+    variants: [
+      { size: '30ml', tier: 'AA', price: 20000, stock: 20 },
+      { size: '50ml', tier: 'AA', price: 30000, stock: 18 },
+      { size: '75ml', tier: 'AA', price: 40000, stock: 15 },
+      { size: '100ml', tier: 'AA', price: 80000, stock: 12 },
+      { size: '100ml', tier: 'AAA', price: 160000, stock: 6 },
+    ],
+    imageUrl: '/images/products/arabes/ahli-vega.jpg',
+    gallery: ['/images/products/arabes/ahli-vega.jpg', '/images/products/tamanos-disponibles.png'],
+  },
+  {
+    id: 'amber-rouge-premium',
+    name: "Amber Rouge Premium 200ml",
+    brand: 'Orientica',
+    type: 'arabe',
+    family: 'Oriental Amaderado',
+    gender: 'Unisex',
+    notes: 'Ámbar · Oud · Resinas · Maderas preciosas · Almizcle · Especias',
+    description: "Versión premium de Amber Rouge en formato 200ml edición especial. Lujo oriental máximo, resinoso e intenso.",
+    color: { primary: '#6B0F1F', accent: '#C9844A', shadow: 'rgba(201,132,74,0.4)' },
+    variants: [
+      { size: '30ml', tier: 'AA', price: 20000, stock: 20 },
+      { size: '50ml', tier: 'AA', price: 30000, stock: 18 },
+      { size: '75ml', tier: 'AA', price: 40000, stock: 15 },
+      { size: '100ml', tier: 'AA', price: 80000, stock: 12 },
+      { size: '100ml', tier: 'AAA', price: 160000, stock: 6 },
+    ],
+    imageUrl: '/images/products/arabes/amber-rouge-premium.jpg',
+    gallery: ['/images/products/arabes/amber-rouge-premium.jpg', '/images/products/tamanos-disponibles.png'],
   },
 
 ];
