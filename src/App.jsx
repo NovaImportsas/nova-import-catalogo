@@ -624,19 +624,18 @@ const PRODUCTS = [
   },
   {
     id: 'insp-montblanc-legend',
-    name: 'Esencia inspirada en Montblanc Legend',
+    name: 'Esencia inspirada en Legend',
     inspiredBy: 'Montblanc Legend',
     type: 'inspirado',
     family: 'Aromático Frutal',
     gender: 'Hombre',
-    notes: 'Bergamota · Lavanda · Manzana · Sándalo · Haba tonka · Almizcle',
-    description: 'Esencia inspirada en el perfil aromático frutal masculino tipo Legend de Montblanc. Frescura aromática con un fondo cremoso de tonka. Producto no afiliado con la casa referenciada.',
-    color: { primary: '#0A0A0A', accent: '#5C5C5C', shadow: 'rgba(92,92,92,0.3)' },
+    notes: 'Bergamota · Piña · Lavanda · Verbena · Manzana roja · Geranio · Cumarina · Rosa · Sándalo · Haba tonka · Ámbar · Musgo de roble',
+    description: 'Esencia inspirada en el perfil aromático frutal masculino tipo Legend de Montblanc. Carisma, frescura y elegancia. Una esencia que deja huella y nunca pasa desapercibida. Producto no afiliado con la casa referenciada.',
+    color: { primary: '#0A1B40', accent: '#3D6BB5', shadow: 'rgba(61,107,181,0.3)' },
     variants: [
-      { size: '30ml', tier: 'AA', price: 18000, stock: 22 },
-      { size: '50ml', tier: 'AA', price: 28000, stock: 18 },
-      { size: '75ml', tier: 'AA', price: 38000, stock: 14 },
-      { size: '100ml', tier: 'AA', price: 75000, stock: 10 },
+      { size: '30ml', tier: 'AA', price: 18000, stock: 25 },
+      { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
+      { size: '100ml', tier: 'AA', price: 75000, stock: 12 },
     ],
     imageUrl: '',
   },
@@ -854,6 +853,7 @@ const PRODUCTS = [
   // ============================================================
   {
     id: 'spinner-sensorial-bebe',
+    mercadoLibreUrl: 'https://www.mercadolibre.com.co/set-x3-spinner-sensorial-bebe-animales-con-ventosa/up/MCOU3867862195',
     name: 'Set X3 Spinner Sensorial Bebé con Ventosa',
     brand: 'Nova Import',
     type: 'bebe',
@@ -875,6 +875,7 @@ const PRODUCTS = [
   },
   {
     id: 'vaso-pitillo-bebe',
+    mercadoLibreUrl: 'https://www.mercadolibre.com.co/vaso-entrenador-para-nina-con-popote/up/MCOU3917082425',
     name: 'Vaso Infantil con Pitillo · Arcoíris',
     brand: 'Nova Import',
     type: 'bebe',
@@ -893,6 +894,7 @@ const PRODUCTS = [
   },
   {
     id: 'tazon-bambu-bebe',
+    mercadoLibreUrl: 'https://www.mercadolibre.com.co/set-plato-bambu-y-cuchara-silicona-antideslizante-bebe/up/MCOU3867913407',
     name: 'Tazón de Bambú con Base Antideslizante + Cuchara',
     brand: 'Nova Import',
     type: 'bebe',
@@ -914,6 +916,7 @@ const PRODUCTS = [
   },
   {
     id: 'pack-esencial-bebe',
+    whatsappOnly: true,
     name: 'Pack Esencial para Bebé · Nova Import',
     brand: 'Nova Import',
     type: 'bebe',
@@ -938,6 +941,7 @@ const PRODUCTS = [
   // ============================================================
   {
     id: 'pads-perros',
+    mercadoLibreUrl: 'https://www.mercadolibre.com.co/tapete-sanitario-hally-pets-40-unidades-extra-grande-90x60cm-descartable-con-gel/p/MCO51202290',
     name: 'Pads Entrenadores Absorbentes para Perros · 60x60 cm · x40 unidades',
     brand: 'Nova Import',
     type: 'mascotas',
@@ -959,6 +963,7 @@ const PRODUCTS = [
   // ============================================================
   {
     id: 'estantes-bano-set5',
+    mercadoLibreUrl: 'https://www.mercadolibre.com.co/organizador-de-bano-para-esquina-negro/up/MCOU3928690446',
     name: 'Set X5 Estantes Organizadores para Baño · Acero Inoxidable Negro',
     brand: 'Nova Import',
     type: 'hogar',
@@ -976,6 +981,363 @@ const PRODUCTS = [
     ],
     featured: true,
     bestseller: true,
+  },
+  {
+    id: 'insp-club-nuit-intense',
+    name: 'Esencia inspirada en Club de Nuit Intense',
+    inspiredBy: 'Armaf Club de Nuit Intense Man',
+    type: 'inspirado',
+    family: 'Amaderado Aromático',
+    gender: 'Hombre',
+    notes: 'Limón · Piña · Bergamota · Manzana · Grosella negra · Abedul · Jazmín · Rosa · Almizcle · Ámbar gris · Pachulí · Vainilla · Musgo',
+    description: "Esencia inspirada en el perfil aromático amaderado masculino tipo Club de Nuit Intense. Intensa, elegante y duradera. Ideal para uso diario y noches especiales. Producto no afiliado con la casa referenciada.",
+    color: { primary: '#0B1B3A', accent: '#3A5DA6', shadow: 'rgba(58,93,166,0.3)' },
+    variants: [
+      { size: '30ml', tier: 'AA', price: 18000, stock: 25 },
+      { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
+      { size: '100ml', tier: 'AA', price: 75000, stock: 12 },
+    ],
+    imageUrl: '',
+  },
+  {
+    id: 'insp-leau-issey',
+    name: "Esencia inspirada en L'Eau d'Issey Pour Homme",
+    inspiredBy: "Issey Miyake L'Eau d'Issey Pour Homme",
+    type: 'inspirado',
+    family: 'Acuático Amaderado',
+    gender: 'Unisex',
+    notes: 'Yuzu · Limón · Verbena · Bergamota · Mandarina · Flor de loto · Lirio de agua · Canela · Cedro · Almizcle · Ámbar · Tabaco',
+    description: "Esencia inspirada en el perfil acuático fresco tipo L'Eau d'Issey. Frescura cítrica con un fondo limpio y atemporal. Producto no afiliado con la casa referenciada.",
+    color: { primary: '#1A4A75', accent: '#7AB8DC', shadow: 'rgba(122,184,220,0.3)' },
+    variants: [
+      { size: '30ml', tier: 'AA', price: 18000, stock: 25 },
+      { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
+      { size: '100ml', tier: 'AA', price: 75000, stock: 12 },
+    ],
+    imageUrl: '',
+  },
+  {
+    id: 'insp-perry-380',
+    name: 'Esencia inspirada en 380° Perry Ellis',
+    inspiredBy: 'Perry Ellis 360°',
+    type: 'inspirado',
+    family: 'Aromático Cítrico',
+    gender: 'Hombre',
+    notes: 'Bergamota · Limón · Lima · Mandarina · Cardamomo · Lavanda · Geranio · Maderas cálidas · Almizcle · Ámbar · Musgo de roble',
+    description: "Esencia inspirada en el perfil moderno y masculino tipo 380° Perry Ellis. Cítrica con especias suaves y un fondo amaderado. Producto no afiliado con la casa referenciada.",
+    color: { primary: '#0E2A55', accent: '#4F7DCB', shadow: 'rgba(79,125,203,0.3)' },
+    variants: [
+      { size: '30ml', tier: 'AA', price: 18000, stock: 25 },
+      { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
+      { size: '100ml', tier: 'AA', price: 75000, stock: 12 },
+    ],
+    imageUrl: '',
+  },
+  {
+    id: 'insp-hugo-boss-iced',
+    name: 'Esencia inspirada en Hugo Boss Iced',
+    inspiredBy: 'Hugo Boss Bottled Iced',
+    type: 'inspirado',
+    family: 'Aromático Fresco',
+    gender: 'Hombre',
+    notes: 'Menta helada · Manzana verde · Cítricos · Té negro · Lavanda · Geranio · Especias · Maderas ambaradas · Almizcle · Vetiver · Musgo',
+    description: "Esencia inspirada en el perfil fresco y energético tipo Hugo Boss Iced. Sensación helada y refrescante para uso diario. Producto no afiliado con la casa referenciada.",
+    color: { primary: '#0F2D5C', accent: '#5AA5E0', shadow: 'rgba(90,165,224,0.3)' },
+    variants: [
+      { size: '30ml', tier: 'AA', price: 18000, stock: 25 },
+      { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
+      { size: '100ml', tier: 'AA', price: 75000, stock: 12 },
+    ],
+    imageUrl: '',
+  },
+  {
+    id: 'insp-blue-seduction',
+    name: 'Esencia inspirada en Blue Seduction',
+    inspiredBy: 'Antonio Banderas Blue Seduction',
+    type: 'inspirado',
+    family: 'Acuático Amaderado',
+    gender: 'Hombre',
+    notes: 'Melón · Menta · Pepino · Cítricos · Manzana verde · Notas acuáticas · Albahaca · Almizcle · Ámbar gris · Maderas ligeras',
+    description: "Esencia inspirada en el perfil fresco y atractivo tipo Blue Seduction. Notas acuáticas y aromáticas para el hombre moderno. Producto no afiliado con la casa referenciada.",
+    color: { primary: '#1A4F8C', accent: '#7AC0E8', shadow: 'rgba(122,192,232,0.3)' },
+    variants: [
+      { size: '30ml', tier: 'AA', price: 18000, stock: 25 },
+      { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
+      { size: '100ml', tier: 'AA', price: 75000, stock: 12 },
+    ],
+    imageUrl: '',
+  },
+  {
+    id: 'insp-paris-hilton',
+    name: 'Esencia inspirada en Paris Hilton',
+    inspiredBy: 'Paris Hilton (Mujer)',
+    type: 'inspirado',
+    family: 'Floral Oriental',
+    gender: 'Mujer',
+    notes: 'Manzana · Durazno · Fresa · Yuca · Melón · Lirio de los valles · Mimosa · Jazmín · Nardos · Ylang-ylang · Almizcle · Musgo de roble · Sándalo',
+    description: "Esencia inspirada en el perfil femenino, fresco y dulce tipo Paris Hilton. Elegancia y encanto en cada nota. Producto no afiliado con la casa referenciada.",
+    color: { primary: '#A6457A', accent: '#F2B7D1', shadow: 'rgba(242,183,209,0.3)' },
+    variants: [
+      { size: '30ml', tier: 'AA', price: 18000, stock: 25 },
+      { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
+      { size: '100ml', tier: 'AA', price: 75000, stock: 12 },
+    ],
+    imageUrl: '',
+  },
+  {
+    id: 'insp-lapidus',
+    name: 'Esencia inspirada en Lapidus',
+    inspiredBy: 'Ted Lapidus Pour Homme',
+    type: 'inspirado',
+    family: 'Aromático Fougère',
+    gender: 'Hombre',
+    notes: 'Lavanda · Albahaca · Bergamota · Limón · Notas verdes · Clavel · Canela · Jazmín · Geranio · Rosa · Sándalo · Vetiver · Pachulí · Musgo de roble · Ámbar',
+    description: "Esencia inspirada en el perfil clásico y atemporal masculino tipo Lapidus. Aromática, fougère y sofisticada. Producto no afiliado con la casa referenciada.",
+    color: { primary: '#0F2848', accent: '#506FA8', shadow: 'rgba(80,111,168,0.3)' },
+    variants: [
+      { size: '30ml', tier: 'AA', price: 18000, stock: 25 },
+      { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
+      { size: '100ml', tier: 'AA', price: 75000, stock: 12 },
+    ],
+    imageUrl: '',
+  },
+  {
+    id: 'insp-lacoste-red',
+    name: 'Esencia inspirada en Lacoste Red',
+    inspiredBy: 'Lacoste Red',
+    type: 'inspirado',
+    family: 'Aromático Frutal',
+    gender: 'Hombre',
+    notes: 'Manzana roja · Piña · Ciruela · Toronja · Pino · Jazmín · Geranio · Cedro · Sándalo · Pachulí · Vetiver · Ámbar',
+    description: "Esencia inspirada en el perfil energético y juvenil tipo Lacoste Red. Frutal con un fondo amaderado vibrante. Producto no afiliado con la casa referenciada.",
+    color: { primary: '#1A2E5C', accent: '#C8242E', shadow: 'rgba(200,36,46,0.3)' },
+    variants: [
+      { size: '30ml', tier: 'AA', price: 18000, stock: 25 },
+      { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
+      { size: '100ml', tier: 'AA', price: 75000, stock: 12 },
+    ],
+    imageUrl: '',
+  },
+  {
+    id: 'insp-starwalker',
+    name: 'Esencia inspirada en Starwalker',
+    inspiredBy: 'Montblanc Starwalker',
+    type: 'inspirado',
+    family: 'Amaderado Aromático',
+    gender: 'Hombre',
+    notes: 'Bergamota · Mandarina · Bambú · Hojas de violeta · Jengibre · Nuez moscada · Sándalo · Jazmín · Ámbar · Almizcle blanco · Cedro · Musgo de roble',
+    description: "Esencia inspirada en el perfil moderno, fresco e inconfundible tipo Starwalker. Aromática y amaderada para el hombre que deja huella. Producto no afiliado con la casa referenciada.",
+    color: { primary: '#0A1B40', accent: '#3D6BB5', shadow: 'rgba(61,107,181,0.3)' },
+    variants: [
+      { size: '30ml', tier: 'AA', price: 18000, stock: 25 },
+      { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
+      { size: '103ml', tier: 'AA', price: 78000, stock: 12 },
+    ],
+    imageUrl: '',
+  },
+  {
+    id: 'insp-tommy-hilfiger',
+    name: 'Esencia inspirada en Tommy',
+    inspiredBy: 'Tommy Hilfiger Tommy',
+    type: 'inspirado',
+    family: 'Aromático Cítrico',
+    gender: 'Hombre',
+    notes: 'Bergamota · Mandarina · Lavanda · Menta · Manzana verde · Arándano · Geranio · Jazmín · Sándalo · Ámbar · Musgo de roble · Cedro',
+    description: "Esencia inspirada en el perfil clásico, fresco e icónico tipo Tommy. Frescura juvenil con un fondo elegante. Producto no afiliado con la casa referenciada.",
+    color: { primary: '#0E2354', accent: '#C82832', shadow: 'rgba(200,40,50,0.3)' },
+    variants: [
+      { size: '30ml', tier: 'AA', price: 18000, stock: 25 },
+      { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
+      { size: '94ml', tier: 'AA', price: 72000, stock: 12 },
+    ],
+    imageUrl: '',
+  },
+  {
+    id: 'insp-toy-boy',
+    name: 'Esencia inspirada en Toy Boy',
+    inspiredBy: 'Moschino Toy Boy',
+    type: 'inspirado',
+    family: 'Oriental Especiado',
+    gender: 'Hombre',
+    notes: 'Manzana verde · Pimienta rosa · Pera · Bergamota · Rosa · Clavo · Magnolia · Lino · Vetiver · Sándalo · Ámbar · Cedro · Almizcle',
+    description: "Esencia inspirada en el perfil irreverente y sofisticado tipo Toy Boy. Especiada y seductora, rompe las reglas. Producto no afiliado con la casa referenciada.",
+    color: { primary: '#0A0F1F', accent: '#D14778', shadow: 'rgba(209,71,120,0.3)' },
+    variants: [
+      { size: '30ml', tier: 'AA', price: 18000, stock: 25 },
+      { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
+      { size: '100ml', tier: 'AA', price: 75000, stock: 12 },
+    ],
+    imageUrl: '',
+  },
+  {
+    id: 'insp-lacoste-blanca',
+    name: 'Esencia inspirada en Lacoste Blanca',
+    inspiredBy: 'Lacoste L.12.12 Blanc',
+    type: 'inspirado',
+    family: 'Amaderado Aromático',
+    gender: 'Hombre',
+    notes: 'Pomelo · Cardamomo · Cedro · Romero · Ylang-ylang · Nardos · Cuero · Vetiver · Gamuza · Madera de cedro',
+    description: "Esencia inspirada en el perfil fresco, limpio e inconfundible tipo Lacoste Blanca. Pomelo y cardamomo sobre un fondo de cuero y madera. Producto no afiliado con la casa referenciada.",
+    color: { primary: '#1A3A72', accent: '#D4DEEC', shadow: 'rgba(212,222,236,0.3)' },
+    variants: [
+      { size: '30ml', tier: 'AA', price: 18000, stock: 25 },
+      { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
+      { size: '140ml', tier: 'AA', price: 88000, stock: 12 },
+    ],
+    imageUrl: '',
+  },
+  {
+    id: 'insp-hugo-red',
+    name: 'Esencia inspirada en Hugo Red',
+    inspiredBy: 'Hugo Boss Red',
+    type: 'inspirado',
+    family: 'Aromático Frutal',
+    gender: 'Hombre',
+    notes: 'Manzana roja · Toronja · Cedrón · Geranio · Lavanda · Salvia · Sándalo · Ámbar · Vetiver · Madera de cedro',
+    description: "Esencia inspirada en el perfil audaz y enérgico tipo Hugo Red. Frutal y aromática con presencia inolvidable. Producto no afiliado con la casa referenciada.",
+    color: { primary: '#1A2E5C', accent: '#C8242E', shadow: 'rgba(200,36,46,0.3)' },
+    variants: [
+      { size: '30ml', tier: 'AA', price: 18000, stock: 25 },
+      { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
+      { size: '100ml', tier: 'AA', price: 75000, stock: 12 },
+    ],
+    imageUrl: '',
+  },
+  {
+    id: 'insp-jean-pascal',
+    name: 'Esencia inspirada en Jean Pascal',
+    inspiredBy: 'Jean Pascal Pour Homme',
+    type: 'inspirado',
+    family: 'Aromático Fougère',
+    gender: 'Hombre',
+    notes: 'Bergamota · Limón · Albahaca · Lavanda · Clavel · Geranio · Jazmín · Rosa · Sándalo · Ámbar · Musgo de roble · Cedro',
+    description: "Esencia inspirada en la elegancia clásica y carisma auténtico tipo Jean Pascal. Aromática y atemporal. Producto no afiliado con la casa referenciada.",
+    color: { primary: '#0E2A60', accent: '#D4AC58', shadow: 'rgba(212,172,88,0.3)' },
+    variants: [
+      { size: '30ml', tier: 'AA', price: 18000, stock: 25 },
+      { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
+      { size: '100ml', tier: 'AA', price: 75000, stock: 12 },
+    ],
+    imageUrl: '',
+  },
+  {
+    id: 'insp-odyssey-manager',
+    name: 'Esencia inspirada en Odyssey Manager',
+    inspiredBy: 'Armaf Odyssey',
+    type: 'inspirado',
+    family: 'Amaderado Aromático',
+    gender: 'Hombre',
+    notes: 'Bergamota · Mandarina · Pimienta rosa · Lavanda · Salvia · Geranio · Ámbar · Vetiver · Cedro · Pachulí',
+    description: "Esencia inspirada en el perfil moderno y sofisticado tipo Odyssey Manager. Liderazgo y carisma en cada nota. Producto no afiliado con la casa referenciada.",
+    color: { primary: '#0A1F4D', accent: '#D4AC58', shadow: 'rgba(212,172,88,0.3)' },
+    variants: [
+      { size: '30ml', tier: 'AA', price: 18000, stock: 25 },
+      { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
+      { size: '100ml', tier: 'AA', price: 75000, stock: 12 },
+    ],
+    imageUrl: '',
+  },
+  {
+    id: 'insp-bharara-king',
+    name: 'Esencia inspirada en Bharara King',
+    inspiredBy: 'Bharara King',
+    type: 'inspirado',
+    family: 'Oriental Especiado',
+    gender: 'Hombre',
+    notes: 'Piña · Bergamota · Grosellas negras · Pimienta negra · Iris · Jazmín · Pachulí · Ámbar · Vainilla · Almizcle · Madera de oud · Musgo',
+    description: "Esencia inspirada en el perfil de poder y realeza tipo Bharara King. Especiada, intensa y profunda. Producto no afiliado con la casa referenciada.",
+    color: { primary: '#0A0F2E', accent: '#D4AC58', shadow: 'rgba(212,172,88,0.3)' },
+    variants: [
+      { size: '30ml', tier: 'AA', price: 18000, stock: 25 },
+      { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
+      { size: '100ml', tier: 'AA', price: 75000, stock: 12 },
+    ],
+    imageUrl: '',
+  },
+  {
+    id: 'insp-erba-pura',
+    name: 'Esencia inspirada en Erba Pura',
+    inspiredBy: 'Xerjoff Erba Pura',
+    type: 'inspirado',
+    family: 'Gourmand Frutal',
+    gender: 'Hombre',
+    notes: 'Naranja · Limón · Bergamota · Frutas exóticas · Frutas tropicales · Frutas blancas · Jazmín · Almizcle blanco · Vainilla · Ámbar · Maderas preciosas',
+    description: "Esencia inspirada en el perfil exótico y sofisticado tipo Erba Pura. Vitalidad y frescura frutal con un fondo dulce. Producto no afiliado con la casa referenciada.",
+    color: { primary: '#1A4D40', accent: '#C8A858', shadow: 'rgba(200,168,88,0.3)' },
+    variants: [
+      { size: '30ml', tier: 'AA', price: 18000, stock: 25 },
+      { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
+      { size: '100ml', tier: 'AA', price: 75000, stock: 12 },
+    ],
+    imageUrl: '',
+  },
+  {
+    id: 'insp-il-femme-lumin',
+    name: 'Esencia inspirada en Il Femme Lumin',
+    inspiredBy: 'Il Femme Lumin',
+    type: 'inspirado',
+    family: 'Floral Oriental',
+    gender: 'Mujer',
+    notes: 'Bergamota · Mandarina · Pera · Grosella negra · Flor de azahar · Jazmín · Tuberosa · Ylang-ylang · Vainilla · Praliné · Almizcle blanco · Ámbar',
+    description: "Esencia inspirada en el perfil luminoso y femenino tipo Il Femme Lumin. Dulce, sofisticada y femenina. Producto no afiliado con la casa referenciada.",
+    color: { primary: '#A6457A', accent: '#F2B7D1', shadow: 'rgba(242,183,209,0.3)' },
+    variants: [
+      { size: '30ml', tier: 'AA', price: 18000, stock: 25 },
+      { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
+      { size: '100ml', tier: 'AA', price: 75000, stock: 12 },
+    ],
+    imageUrl: '',
+  },
+  {
+    id: 'insp-silver-mountain',
+    name: 'Esencia inspirada en Silver Mountain Water',
+    inspiredBy: 'Creed Silver Mountain Water',
+    type: 'inspirado',
+    family: 'Cítrico Fresco',
+    gender: 'Hombre',
+    notes: 'Bergamota · Mandarina · Té verde · Grosellas negras · Nenúfar · Ámbar · Almizcle · Sándalo · Musgo de roble',
+    description: "Esencia inspirada en el perfil fresco, puro y elegante tipo Silver Mountain Water. Cítrica con un fondo cristalino. Producto no afiliado con la casa referenciada.",
+    color: { primary: '#1A3A72', accent: '#A8C8E8', shadow: 'rgba(168,200,232,0.3)' },
+    variants: [
+      { size: '30ml', tier: 'AA', price: 18000, stock: 25 },
+      { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
+      { size: '100ml', tier: 'AA', price: 75000, stock: 12 },
+    ],
+    imageUrl: '',
+  },
+  {
+    id: 'insp-his-confession',
+    name: 'Esencia inspirada en His Confession',
+    inspiredBy: 'His Confession',
+    type: 'inspirado',
+    family: 'Oriental Especiado',
+    gender: 'Hombre',
+    notes: 'Mandarina · Canela · Lavanda · Iris · Nardos · Benjuí · Ciprés · Vainilla · Haba tonka · Ámbar · Pachulí · Incienso',
+    description: 'Esencia inspirada en el perfil oriental especiado masculino tipo His Confession. Intensa, seductora e inolvidable. Magnética, misteriosa y llena de confianza. Producto no afiliado con la casa referenciada.',
+    color: { primary: '#0A0A0A', accent: '#D4AC58', shadow: 'rgba(212,172,88,0.3)' },
+    variants: [
+      { size: '30ml', tier: 'AA', price: 18000, stock: 25 },
+      { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
+      { size: '100ml', tier: 'AA', price: 75000, stock: 12 },
+    ],
+    imageUrl: '',
+  },
+  {
+    id: 'insp-ck-one',
+    name: 'Esencia inspirada en CK One',
+    inspiredBy: 'Calvin Klein One',
+    type: 'inspirado',
+    family: 'Cítrico Fresco',
+    gender: 'Unisex',
+    notes: 'Bergamota · Mandarina · Piña · Papaya · Limón · Lirio de los valles · Violeta · Nuez moscada · Rosa · Jazmín · Almizcle · Ámbar · Cedro · Musgo de roble',
+    description: 'Esencia inspirada en el perfil cítrico fresco icónico tipo CK One. La esencia de la libertad. Un clásico que trasciende tiempo, géneros y estilos. Producto no afiliado con la casa referenciada.',
+    color: { primary: '#2A3D2A', accent: '#A8B89E', shadow: 'rgba(168,184,158,0.3)' },
+    variants: [
+      { size: '30ml', tier: 'AA', price: 18000, stock: 25 },
+      { size: '70ml', tier: 'AA', price: 38000, stock: 18 },
+      { size: '100ml', tier: 'AA', price: 75000, stock: 12 },
+    ],
+    imageUrl: '',
   },
 ];
 
@@ -1064,7 +1426,7 @@ const buildSearchTerm = (product) => {
   const base = product.name.replace(/[·\u00b7\u2022]/g, '').replace(/\s+/g,' ').trim();
   return encodeURIComponent(base);
 };
-const getMercadoLibreUrl = (product) => `${MERCADOLIBRE_BASE}/${buildSearchTerm(product)}`;
+const getMercadoLibreUrl = (product) => product.mercadoLibreUrl || `${MERCADOLIBRE_BASE}/${buildSearchTerm(product)}`;
 const getShopifyUrl = (product) => `${SHOPIFY_BASE}/search?q=${buildSearchTerm(product)}`;
 
 // ============================================================
@@ -1191,7 +1553,7 @@ const Marquee = () => (
 // ============================================================
 // HEADER
 // ============================================================
-const Header = ({ onNavigate, currentView, cartCount, onCartOpen }) => {
+const Header = ({ onNavigate, currentView, cartCount, onCartOpen, searchQuery }) => {
   const [open, setOpen] = useState(false);
   const wishlist = useWishlist();
   const wishlistCount = wishlist.length;
@@ -1231,22 +1593,29 @@ const Header = ({ onNavigate, currentView, cartCount, onCartOpen }) => {
             ))}
           </nav>
           
-          <div className="flex-1 max-w-md relative hidden md:block ml-4">
+          <form
+            onSubmit={(e) => { e.preventDefault(); const q = (e.target.q.value || '').trim(); if (q) onNavigate({ view: 'search', q }); }}
+            className="flex-1 max-w-md relative hidden md:block ml-4"
+          >
             <input
+              name="q"
+              defaultValue={searchQuery || ''}
               className="w-full bg-stone-100 px-4 py-2.5 pl-10 text-sm rounded-full focus:outline-none focus:ring-2 f-dm"
               placeholder="Buscar perfume, marca, familia…"
             />
             <Search size={16} className="absolute left-3.5 top-3 text-stone-400" />
-          </div>
+          </form>
           
           <div className="flex gap-4 items-center" style={{ color: C.navy }}>
-            <button className="hidden sm:block"><Search size={20} className="md:hidden" /></button>
-            <button onClick={() => onNavigate('track')} className="hidden sm:block" title="Seguimiento">
+            <a
+              href={`https://wa.me/573173641851?text=${encodeURIComponent('Hola Nova Import, quiero hacer seguimiento de mi pedido. Mi número es: ')}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:block"
+              title="Seguir pedido por WhatsApp"
+            >
               <Package size={20} />
-            </button>
-            <button onClick={() => onNavigate('account')} className="hidden sm:block">
-              <User size={20} />
-            </button>
+            </a>
             <button onClick={() => onNavigate('wishlist')} className="relative" title="Favoritos">
               <Heart size={20} />
               {wishlistCount > 0 && (
@@ -1271,7 +1640,7 @@ const Header = ({ onNavigate, currentView, cartCount, onCartOpen }) => {
           <div className="max-w-[1400px] mx-auto px-8 py-2.5 flex gap-6 text-xs f-archivo font-medium overflow-x-auto" style={{ color: C.muted }}>
             <span className="flex items-center gap-1.5"><Truck size={12} /> Envío 24-72h a todo Colombia</span>
             <span className="flex items-center gap-1.5"><Shield size={12} /> Garantía de autenticidad</span>
-            <span className="flex items-center gap-1.5"><Lock size={12} /> Pago seguro Wompi · Bold</span>
+            <span className="flex items-center gap-1.5"><Lock size={12} /> Pago contraentrega · Nequi · Transferencia</span>
             <span className="flex items-center gap-1.5"><MessageCircle size={12} /> Atención por WhatsApp</span>
           </div>
         </div>
@@ -1526,34 +1895,6 @@ const Home = ({ onNavigate, onSelectProduct }) => {
         </div>
       </section>
       
-      {/* Promo banners */}
-      <section className="py-10">
-        <div className="max-w-[1400px] mx-auto px-4 lg:px-8 grid md:grid-cols-2 gap-4">
-          <div className="p-8 lg:p-10 text-white relative overflow-hidden" style={{ background: `linear-gradient(135deg, ${C.navy} 0%, ${C.navyDark} 100%)` }}>
-            <div className="absolute inset-0 opacity-20" style={{ background: `radial-gradient(circle at 100% 0%, ${C.orange} 0%, transparent 50%)` }} />
-            <div className="relative">
-              <div className="f-archivo text-xs font-bold tracking-wider mb-2" style={{ color: C.orange }}>SET DESCUBRIMIENTO</div>
-              <div className="f-archivo font-black text-3xl lg:text-4xl leading-tight mb-3">5 muestras<br />a tu elección.</div>
-              <div className="mb-4 text-white/80">Prueba antes de comprar el frasco. 5 esencias de 5ml.</div>
-              <button className="px-6 py-3 f-archivo font-bold text-sm" style={{ background: C.orange }}>
-                $35.000 · PEDIR
-              </button>
-            </div>
-          </div>
-          <div className="p-8 lg:p-10 relative overflow-hidden" style={{ background: `linear-gradient(135deg, ${C.orange} 0%, ${C.orangeDark} 100%)` }}>
-            <div className="absolute inset-0 opacity-20" style={{ background: `radial-gradient(circle at 0% 100%, ${C.navy} 0%, transparent 50%)` }} />
-            <div className="relative text-white">
-              <div className="f-archivo text-xs font-bold tracking-wider mb-2 opacity-90">PROMO COMBO</div>
-              <div className="f-archivo font-black text-3xl lg:text-4xl leading-tight mb-3">Lleva 2,<br />paga 1.5.</div>
-              <div className="mb-4 opacity-90">En toda la línea de inspirados de 50ml y 75ml.</div>
-              <button className="px-6 py-3 f-archivo font-bold text-sm text-white" style={{ background: C.navy }}>
-                APROVECHAR
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-      
       {/* Brands Strip - Árabes */}
       <section className="py-12 lg:py-16">
         <div className="max-w-[1400px] mx-auto px-4 lg:px-8">
@@ -1613,19 +1954,6 @@ const Home = ({ onNavigate, onSelectProduct }) => {
         </div>
       </section>
       
-      {/* Newsletter */}
-      <section className="py-16" style={{ background: C.navy }}>
-        <div className="max-w-2xl mx-auto px-6 text-center text-white space-y-6">
-          <Sparkles size={28} className="mx-auto" style={{ color: C.orange }} strokeWidth={1.5} />
-          <h3 className="f-archivo font-black text-3xl lg:text-4xl leading-tight">10% de descuento en tu primer pedido</h3>
-          <p className="text-white/80">Suscríbete y recibe ofertas exclusivas, lanzamientos y restocks.</p>
-          <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto pt-2">
-            <input type="email" placeholder="tu@correo.com" className="flex-1 bg-white/10 border border-white/20 px-5 py-3.5 text-white placeholder:text-white/40 focus:outline-none focus:border-white/60" />
-            <button className="px-7 py-3.5 f-archivo font-bold text-sm" style={{ background: C.orange }}>SUSCRIBIRME</button>
-          </div>
-          <p className="text-xs text-white/50">Datos tratados conforme a la Ley 1581 de 2012. Sin spam.</p>
-        </div>
-      </section>
     </main>
   );
 };
@@ -1633,28 +1961,64 @@ const Home = ({ onNavigate, onSelectProduct }) => {
 // ============================================================
 // CATALOG
 // ============================================================
+const DEFAULT_FILTERS = { gender: 'todos', type: 'todos', brand: 'todos', family: 'todos' };
+
 const Catalog = ({ initialFilter = {}, onSelectProduct, title = 'Catálogo completo' }) => {
   const [filters, setFilters] = useState({
+    ...DEFAULT_FILTERS,
     gender: initialFilter.gender || 'todos',
     type: initialFilter.type || 'todos',
-    brand: 'todos',
-    family: 'todos',
     ...initialFilter,
   });
   const [sort, setSort] = useState('relevance');
-  
-  let products = PRODUCTS.filter(p => {
+  const [showAllOverride, setShowAllOverride] = useState(false);
+
+  // Available filter values are computed dynamically from the products that match the lock filters (bestseller/typeIn)
+  // so the user only sees options that will actually return results.
+  const lockedProducts = PRODUCTS.filter(p => {
     if (filters.bestseller && !p.bestseller) return false;
     if (filters.typeIn && Array.isArray(filters.typeIn) && !filters.typeIn.includes(p.type)) return false;
+    return true;
+  });
+
+  const availableBrands = [...new Set(lockedProducts.map(p => p.brand).filter(b => b && BRANDS.includes(b)))];
+  const availableFamilies = [...new Set(lockedProducts.map(p => p.family).filter(Boolean))];
+  const availableGenders = [...new Set(lockedProducts.map(p => p.gender).filter(Boolean))];
+
+  const filterDefs = [
+    { key: 'gender', label: 'Género', opts: ['todos', ...availableGenders] },
+    { key: 'type', label: 'Tipo', opts: [
+      { v: 'todos', l: 'Todos' },
+      { v: 'arabe', l: 'Marcas árabes' },
+      { v: 'inspirado', l: 'Inspirados' },
+      { v: 'bebe', l: 'Bebé' },
+      { v: 'mascotas', l: 'Mascotas' },
+      { v: 'hogar', l: 'Hogar' },
+    ]},
+    { key: 'brand', label: 'Marca', opts: ['todos', ...availableBrands] },
+    { key: 'family', label: 'Familia', opts: ['todos', ...availableFamilies] },
+  ];
+
+  const activeFiltersCount = filterDefs.reduce((n, f) => n + (filters[f.key] !== 'todos' ? 1 : 0), 0);
+
+  // showAllOverride bypasses initialFilter — useful for nav links that landed on a sub-catalog
+  const baseProducts = showAllOverride ? PRODUCTS : lockedProducts;
+
+  let products = baseProducts.filter(p => {
     if (filters.gender !== 'todos' && p.gender !== filters.gender && p.gender !== 'Unisex') return false;
     if (filters.type !== 'todos' && p.type !== filters.type) return false;
     if (filters.brand !== 'todos' && p.brand !== filters.brand) return false;
     if (filters.family !== 'todos' && p.family !== filters.family) return false;
     return true;
   });
-  
+
   if (sort === 'price-asc') products = [...products].sort((a, b) => minPrice(a) - minPrice(b));
   if (sort === 'price-desc') products = [...products].sort((a, b) => maxPrice(b) - maxPrice(a));
+
+  const resetAll = () => {
+    setFilters(DEFAULT_FILTERS);
+    setShowAllOverride(true);
+  };
   
   return (
     <main className="bg-white min-h-screen f-dm">
@@ -1662,56 +2026,73 @@ const Catalog = ({ initialFilter = {}, onSelectProduct, title = 'Catálogo compl
         <div className="max-w-[1400px] mx-auto px-4 lg:px-8">
           <div className="f-mono mb-3" style={{ color: C.orange }}>EL CATÁLOGO</div>
           <h1 className="f-archivo font-black text-4xl lg:text-5xl mb-3">{title}</h1>
-          <p style={{ color: C.muted }}>{products.length} {products.every(p => p.type === 'arabe' || p.type === 'inspirado') ? 'fragancias' : 'productos'} disponibles · Envío a toda Colombia</p>
+          <p style={{ color: C.muted }}>
+            {products.length} {products.length > 0 && products.every(p => p.type === 'arabe' || p.type === 'inspirado') ? 'fragancias' : 'productos'}
+            {activeFiltersCount > 0 ? ' filtrados' : ' disponibles'} · Envío a toda Colombia
+          </p>
         </div>
       </section>
       
       {/* Filters */}
       <section className="border-b bg-white" style={{ borderColor: '#E5E5E0' }}>
-        <div className="max-w-[1400px] mx-auto px-4 lg:px-8 py-4 flex flex-wrap items-center gap-3">
-          <div className="flex items-center gap-2 f-archivo text-xs font-bold mr-2" style={{ color: C.muted }}>
+        <div className="max-w-[1400px] mx-auto px-4 lg:px-8 py-4 flex flex-wrap items-center gap-2 lg:gap-3">
+          <div className="w-full lg:w-auto flex items-center gap-2 f-archivo text-xs font-bold mr-2" style={{ color: C.muted }}>
             <Filter size={14} /> FILTROS
+            <button
+              onClick={resetAll}
+              className="ml-auto lg:ml-3 f-archivo text-xs font-bold px-3 py-1.5 rounded-full text-white transition-colors hover:opacity-90"
+              style={{ background: C.navy }}
+            >
+              MOSTRAR TODOS
+            </button>
           </div>
-          {[
-            { key: 'gender', label: 'Género', opts: ['todos', 'Hombre', 'Mujer', 'Unisex'] },
-            { key: 'type', label: 'Tipo', opts: [
-              { v: 'todos', l: 'Todos' },
-              { v: 'arabe', l: 'Marcas árabes' },
-              { v: 'inspirado', l: 'Inspirados' },
-              { v: 'bebe', l: 'Bebé' },
-              { v: 'mascotas', l: 'Mascotas' },
-              { v: 'hogar', l: 'Hogar' },
-            ]},
-            { key: 'brand', label: 'Marca', opts: ['todos', ...BRANDS] },
-            { key: 'family', label: 'Familia', opts: ['todos', ...FAMILIES] },
-          ].map(f => (
-            <div key={f.key} className="relative">
-              <select
-                value={filters[f.key]}
-                onChange={(e) => setFilters({ ...filters, [f.key]: e.target.value })}
-                className="appearance-none f-archivo text-sm font-semibold pl-4 pr-9 py-2 border rounded-full bg-white cursor-pointer hover:border-stone-400"
-                style={{ borderColor: '#D5D5D0' }}
+          <div className="flex gap-2 lg:gap-3 overflow-x-auto -mx-4 px-4 lg:mx-0 lg:px-0 lg:flex-wrap w-full lg:w-auto pb-1 lg:pb-0">
+            {filterDefs.map(f => {
+              const isActive = filters[f.key] !== 'todos';
+              return (
+                <div key={f.key} className="relative flex-shrink-0">
+                  <select
+                    value={filters[f.key]}
+                    onChange={(e) => setFilters({ ...filters, [f.key]: e.target.value })}
+                    className="appearance-none f-archivo text-xs lg:text-sm font-semibold pl-3 lg:pl-4 pr-8 lg:pr-9 py-2 border-2 rounded-full cursor-pointer transition-colors"
+                    style={{
+                      borderColor: isActive ? C.orange : '#D5D5D0',
+                      background: isActive ? '#FFF7ED' : 'white',
+                      color: isActive ? C.orange : C.ink,
+                    }}
+                  >
+                    {f.opts.map(o => {
+                      const v = typeof o === 'object' ? o.v : o;
+                      const l = typeof o === 'object' ? o.l : o;
+                      return <option key={v} value={v}>{v === 'todos' ? `${f.label}: Todos` : `${f.label}: ${l}`}</option>;
+                    })}
+                  </select>
+                  <ChevronDown size={14} className="absolute right-2.5 top-2.5 pointer-events-none" style={{ color: isActive ? C.orange : C.ink }} />
+                </div>
+              );
+            })}
+
+            {activeFiltersCount > 0 && (
+              <button
+                onClick={() => setFilters(DEFAULT_FILTERS)}
+                className="f-archivo text-xs font-bold underline hover:opacity-70 whitespace-nowrap self-center"
+                style={{ color: C.muted }}
               >
-                {f.opts.map(o => {
-                  const v = typeof o === 'object' ? o.v : o;
-                  const l = typeof o === 'object' ? o.l : o;
-                  return <option key={v} value={v}>{v === 'todos' ? `${f.label}: Todos` : l}</option>;
-                })}
-              </select>
-              <ChevronDown size={14} className="absolute right-3 top-2.5 pointer-events-none" />
-            </div>
-          ))}
-          
-          <div className="ml-auto relative">
+                Limpiar ({activeFiltersCount})
+              </button>
+            )}
+          </div>
+
+          <div className="lg:ml-auto relative w-full lg:w-auto">
             <select
               value={sort}
               onChange={(e) => setSort(e.target.value)}
-              className="appearance-none f-archivo text-sm font-semibold pl-4 pr-9 py-2 border rounded-full bg-white cursor-pointer"
+              className="appearance-none f-archivo text-xs lg:text-sm font-semibold pl-3 lg:pl-4 pr-9 py-2 border rounded-full bg-white cursor-pointer w-full lg:w-auto"
               style={{ borderColor: '#D5D5D0' }}
             >
-              <option value="relevance">Más relevantes</option>
-              <option value="price-asc">Precio ascendente</option>
-              <option value="price-desc">Precio descendente</option>
+              <option value="relevance">Ordenar: Relevancia</option>
+              <option value="price-asc">Precio: menor a mayor</option>
+              <option value="price-desc">Precio: mayor a menor</option>
             </select>
             <ChevronDown size={14} className="absolute right-3 top-2.5 pointer-events-none" />
           </div>
@@ -1726,7 +2107,7 @@ const Catalog = ({ initialFilter = {}, onSelectProduct, title = 'Catálogo compl
           </div>
           {products.length === 0 && (
             <div className="text-center py-20 f-dm" style={{ color: C.muted }}>
-              No hay productos con esos filtros. <button onClick={() => setFilters({ gender: 'todos', type: 'todos', brand: 'todos', family: 'todos' })} className="underline" style={{ color: C.navy }}>Limpiar filtros</button>
+              No hay productos con esos filtros. <button onClick={resetAll} className="underline" style={{ color: C.navy }}>Mostrar todos los productos</button>
             </div>
           )}
         </div>
@@ -2077,26 +2458,38 @@ const ProductDetail = ({ product, onBack, onAddToCart, onWhatsAppBuy, onSelectPr
                 {added ? <><CheckCircle2 size={16} /> AÑADIDO AL CARRITO</> : <><ShoppingBag size={16} /> AÑADIR AL CARRITO · {fmt(selectedVariant.price * qty)}</>}
               </button>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {product.whatsappOnly ? (
                 <a
-                  href={getMercadoLibreUrl(product)}
+                  href={`https://wa.me/573173641851?text=${encodeURIComponent(`Hola Nova Import, quiero pedir: ${product.name} · ${selectedVariant.size} · ${selectedVariant.tier} · Cantidad: ${qty} · Total: ${fmt(selectedVariant.price * qty)}`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-4 f-archivo font-bold text-sm tracking-wide flex items-center justify-center gap-2 text-white transition-colors"
-                  style={{ background: '#FFE600', color: '#2D3277' }}
+                  className="w-full py-4 f-archivo font-bold text-sm tracking-wide flex items-center justify-center gap-2 text-white transition-colors hover:opacity-90"
+                  style={{ background: '#25D366' }}
                 >
-                  <ExternalLink size={14} /> COMPRAR EN MERCADO LIBRE
+                  <MessageCircle size={16} /> PEDIR POR WHATSAPP · {fmt(selectedVariant.price * qty)}
                 </a>
-                <a
-                  href={getShopifyUrl(product)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full py-4 f-archivo font-bold text-sm tracking-wide flex items-center justify-center gap-2 text-white transition-colors"
-                  style={{ background: '#5E8E3E' }}
-                >
-                  <ExternalLink size={14} /> COMPRAR EN SHOPIFY
-                </a>
-              </div>
+              ) : (
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <a
+                    href={getMercadoLibreUrl(product)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full py-4 f-archivo font-bold text-sm tracking-wide flex items-center justify-center gap-2 transition-colors hover:opacity-90"
+                    style={{ background: '#FFE600', color: '#2D3277' }}
+                  >
+                    <ExternalLink size={14} /> COMPRAR EN MERCADO LIBRE
+                  </a>
+                  <a
+                    href={getShopifyUrl(product)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full py-4 f-archivo font-bold text-sm tracking-wide flex items-center justify-center gap-2 text-white transition-colors hover:opacity-90"
+                    style={{ background: '#5E8E3E' }}
+                  >
+                    <ExternalLink size={14} /> COMPRAR EN SHOPIFY
+                  </a>
+                </div>
+              )}
             </div>
             
             <div className="grid grid-cols-2 gap-3 pt-2">
@@ -2172,7 +2565,7 @@ const ProductDetail = ({ product, onBack, onAddToCart, onWhatsAppBuy, onSelectPr
             <div className="max-w-3xl space-y-4 f-dm leading-relaxed" style={{ color: '#3A3A3A' }}>
               <p><strong className="f-archivo">Envíos:</strong> Despachamos a toda Colombia vía Servientrega y Coordinadora. Bogotá 24h, ciudades principales 48-72h, resto del país 3-5 días hábiles. Envío gratuito para compras desde $150.000.</p>
               <p><strong className="f-archivo">Devoluciones:</strong> Tienes 30 días desde la entrega para solicitar cambio o devolución, siempre que el producto esté sellado y sin abrir. Defectos de fábrica los cubrimos al 100%.</p>
-              <p><strong className="f-archivo">Pago seguro:</strong> Procesamos pagos vía Wompi (Bancolombia), Bold o PayU. También aceptamos PSE, Nequi, Daviplata y pagos en cuotas con Addi.</p>
+              <p><strong className="f-archivo">Pago seguro:</strong> Aceptamos Nequi, Bancolombia, transferencia, pago contraentrega y cuotas con Addi. Confirmamos cada pedido por WhatsApp antes de enviar.</p>
             </div>
           )}
 
@@ -2193,6 +2586,60 @@ const ProductDetail = ({ product, onBack, onAddToCart, onWhatsAppBuy, onSelectPr
   );
 };
 
+
+
+// ============================================================
+// SEARCH RESULTS VIEW
+// ============================================================
+const SearchResults = ({ query, onSelectProduct, onNavigate }) => {
+  const q = (query || '').toLowerCase().trim();
+  const items = q ? PRODUCTS.filter(p => {
+    const haystack = [p.name, p.brand, p.family, p.gender, p.inspiredBy || '', p.description || '', p.notes || '']
+      .join(' ').toLowerCase();
+    return q.split(/\s+/).every(token => haystack.includes(token));
+  }) : [];
+
+  return (
+    <main className="bg-white min-h-screen f-dm">
+      <section className="py-10 lg:py-12 border-b" style={{ background: C.cream, borderColor: '#E5E5E0' }}>
+        <div className="max-w-[1400px] mx-auto px-4 lg:px-8">
+          <div className="f-mono mb-3" style={{ color: C.orange }}>RESULTADOS DE BÚSQUEDA</div>
+          <h1 className="f-archivo font-black text-3xl lg:text-4xl mb-3">
+            {q ? <>Buscaste: <span style={{ color: C.orange }}>"{query}"</span></> : 'Escribe algo para buscar'}
+          </h1>
+          <p style={{ color: C.muted }}>
+            {items.length} {items.length === 1 ? 'resultado' : 'resultados'} encontrados
+          </p>
+        </div>
+      </section>
+
+      <section className="py-10">
+        <div className="max-w-[1400px] mx-auto px-4 lg:px-8">
+          {items.length === 0 ? (
+            <div className="text-center py-16">
+              <Search size={48} className="mx-auto mb-4" strokeWidth={1.5} style={{ color: C.muted }} />
+              <p className="f-archivo font-bold text-xl mb-2">Sin resultados</p>
+              <p className="text-sm mb-6" style={{ color: C.muted }}>
+                Intenta con otra palabra. Busca por nombre, marca, género o familia olfativa.
+              </p>
+              <button
+                onClick={() => onNavigate('catalog')}
+                className="text-white px-6 py-3 f-archivo font-bold text-sm"
+                style={{ background: C.navy }}
+              >
+                VER TODO EL CATÁLOGO
+              </button>
+            </div>
+          ) : (
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-5">
+              {items.map(p => <ProductCard key={p.id} product={p} onClick={() => onSelectProduct(p.id)} />)}
+            </div>
+          )}
+        </div>
+      </section>
+    </main>
+  );
+};
 
 // ============================================================
 // WISHLIST VIEW
@@ -2244,7 +2691,7 @@ const Wishlist = ({ onSelectProduct, onNavigate }) => {
 // ============================================================
 // CART DRAWER
 // ============================================================
-const CartDrawer = ({ open, onClose, cart, onUpdateQty, onRemove, onCheckout, onWhatsApp }) => {
+const CartDrawer = ({ open, onClose, cart, onUpdateQty, onRemove, onWhatsApp }) => {
   const subtotal = cart.reduce((s, i) => s + i.variant.price * i.qty, 0);
   const shipping = subtotal >= 150000 || subtotal === 0 ? 0 : 12000;
   const total = subtotal + shipping;
@@ -2300,12 +2747,12 @@ const CartDrawer = ({ open, onClose, cart, onUpdateQty, onRemove, onCheckout, on
                 <span className="f-archivo font-black text-lg">{fmt(total)}</span>
               </div>
             </div>
-            <button onClick={onCheckout} className="w-full text-white py-3.5 f-archivo font-bold text-sm flex items-center justify-center gap-3" style={{ background: C.navy }}>
-              <Lock size={14} /> PAGAR CON WOMPI · {fmt(total)}
+            <button onClick={onWhatsApp} className="w-full text-white py-3.5 f-archivo font-bold text-sm flex items-center justify-center gap-3 transition-colors hover:opacity-90" style={{ background: '#25D366' }}>
+              <MessageCircle size={16} /> FINALIZAR PEDIDO POR WHATSAPP · {fmt(total)}
             </button>
-            <button onClick={onWhatsApp} className="w-full bg-green-500 text-white py-3.5 f-archivo font-bold text-sm flex items-center justify-center gap-3 hover:bg-green-600">
-              <MessageCircle size={14} /> PEDIR POR WHATSAPP
-            </button>
+            <p className="text-[11px] f-dm text-center" style={{ color: C.muted }}>
+              Te llevamos a WhatsApp con tu pedido listo. Allí confirmamos disponibilidad, dirección y método de pago (Nequi, transferencia, contraentrega).
+            </p>
           </div>
         )}
       </div>
@@ -2316,153 +2763,6 @@ const CartDrawer = ({ open, onClose, cart, onUpdateQty, onRemove, onCheckout, on
 // ============================================================
 // TRACK ORDER
 // ============================================================
-const DEMO_ORDER = {
-  number: 'NI-2026-0847',
-  email: 'cliente@example.com',
-  items: [
-    { name: 'Khamrah · Lattafa', size: '100ml AAA', qty: 1, price: 165000 },
-    { name: 'Aromático Frutal · tipo Bad Boy', size: '50ml AA', qty: 2, price: 28000 },
-  ],
-  total: 221000,
-  address: 'Cl. 85 #11-53, Apto 402 · Chapinero, Bogotá',
-  carrier: 'Servientrega',
-  trackingNum: '9876543210',
-  estDelivery: '19 may 2026',
-  timeline: [
-    { label: 'Pedido confirmado', date: '12 may, 14:32', done: true },
-    { label: 'Pago verificado', date: '12 may, 14:35', done: true },
-    { label: 'En preparación', date: '13 may, 09:14', done: true },
-    { label: 'Enviado · Servientrega', date: '14 may, 11:20', done: true },
-    { label: 'En tránsito', date: '17 may, 08:00', done: true, current: true },
-    { label: 'Entregado', date: 'Estimado 19 may', done: false },
-  ],
-};
-
-const TrackOrder = () => {
-  const [orderNum, setOrderNum] = useState('');
-  const [email, setEmail] = useState('');
-  const [result, setResult] = useState(null);
-  const [error, setError] = useState('');
-  
-  const submit = (e) => {
-    e?.preventDefault();
-    setError('');
-    if (orderNum.trim().toUpperCase() === DEMO_ORDER.number && email.trim().toLowerCase() === DEMO_ORDER.email) {
-      setResult(DEMO_ORDER);
-    } else {
-      setError('No encontramos un pedido con esos datos. Para la demo: NI-2026-0847 / cliente@example.com');
-    }
-  };
-  
-  return (
-    <main className="bg-white min-h-screen f-dm">
-      <section className="py-12 lg:py-16 border-b" style={{ background: C.cream, borderColor: '#E5E5E0' }}>
-        <div className="max-w-3xl mx-auto px-4 lg:px-8">
-          <div className="f-mono mb-3" style={{ color: C.orange }}>SEGUIMIENTO</div>
-          <h1 className="f-archivo font-black text-4xl lg:text-5xl mb-3">¿Dónde está mi pedido?</h1>
-          <p style={{ color: C.muted }}>Ingresa tu número de orden y el correo de compra. También recibirás un email cada vez que cambie el estado.</p>
-        </div>
-      </section>
-      
-      <section className="py-12">
-        <div className="max-w-3xl mx-auto px-4 lg:px-8">
-          {!result ? (
-            <form onSubmit={submit} className="bg-white border p-6 lg:p-10 space-y-5" style={{ borderColor: '#E5E5E0' }}>
-              <div>
-                <label className="f-archivo font-bold text-sm block mb-2">Número de pedido</label>
-                <input value={orderNum} onChange={(e) => setOrderNum(e.target.value)} placeholder="NI-2026-XXXX" className="w-full border px-4 py-3 focus:outline-none focus:border-orange-500" style={{ borderColor: '#D5D5D0' }} />
-              </div>
-              <div>
-                <label className="f-archivo font-bold text-sm block mb-2">Correo electrónico</label>
-                <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="tu@correo.com" type="email" className="w-full border px-4 py-3 focus:outline-none focus:border-orange-500" style={{ borderColor: '#D5D5D0' }} />
-              </div>
-              {error && <p className="text-sm text-red-600">{error}</p>}
-              <button type="submit" className="w-full text-white py-4 f-archivo font-bold text-sm tracking-wide" style={{ background: C.navy }}>
-                CONSULTAR ESTADO
-              </button>
-              <p className="text-xs text-center pt-2" style={{ color: C.muted }}>
-                Demo: <span className="f-archivo font-bold">NI-2026-0847</span> · <span className="f-archivo font-bold">cliente@example.com</span>
-              </p>
-            </form>
-          ) : (
-            <div className="space-y-6">
-              <div className="bg-white border p-6 lg:p-8" style={{ borderColor: '#E5E5E0' }}>
-                <div className="flex items-start justify-between flex-wrap gap-3 mb-4">
-                  <div>
-                    <div className="f-mono" style={{ color: C.orange }}>PEDIDO</div>
-                    <h2 className="f-archivo font-black text-2xl">{result.number}</h2>
-                  </div>
-                  <button onClick={() => setResult(null)} className="f-archivo font-bold text-sm" style={{ color: C.muted }}>
-                    ← Consultar otro
-                  </button>
-                </div>
-                <div className="grid sm:grid-cols-2 gap-4 pt-4 border-t" style={{ borderColor: '#E5E5E0' }}>
-                  <div>
-                    <div className="f-archivo text-xs font-bold tracking-wider mb-1" style={{ color: C.muted }}>ENTREGA ESTIMADA</div>
-                    <div className="f-archivo font-black text-xl">{result.estDelivery}</div>
-                  </div>
-                  <div>
-                    <div className="f-archivo text-xs font-bold tracking-wider mb-1" style={{ color: C.muted }}>TRANSPORTADORA</div>
-                    <div className="f-archivo font-bold">{result.carrier} · {result.trackingNum}</div>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="bg-white border p-6 lg:p-8" style={{ borderColor: '#E5E5E0' }}>
-                <h3 className="f-archivo font-black text-xl mb-5">Estado del envío</h3>
-                {result.timeline.map((step, i) => (
-                  <div key={i} className="flex gap-4 pb-5 relative">
-                    {i < result.timeline.length - 1 && (
-                      <div className="absolute left-[15px] top-9 bottom-0 w-px" style={{ background: step.done ? C.orange : '#E5E5E0' }} />
-                    )}
-                    <div className="flex-shrink-0 w-8 h-8 rounded-full border-2 flex items-center justify-center" style={{
-                      background: step.current ? C.orange : (step.done ? C.orange : 'white'),
-                      borderColor: step.done ? C.orange : '#D5D5D0',
-                      color: step.done ? 'white' : '#D5D5D0',
-                    }}>
-                      {step.done ? <Check size={14} strokeWidth={3} /> : <Clock size={12} />}
-                    </div>
-                    <div>
-                      <div className="f-archivo font-bold flex items-center gap-2 flex-wrap" style={{ color: step.done ? C.ink : C.muted }}>
-                        {step.label}
-                        {step.current && <span className="text-xs px-2 py-0.5 text-white" style={{ background: C.orange }}>ACTUAL</span>}
-                      </div>
-                      <div className="text-xs mt-0.5" style={{ color: C.muted }}>{step.date}</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              
-              <div className="grid md:grid-cols-2 gap-4">
-                <div className="bg-white border p-6" style={{ borderColor: '#E5E5E0' }}>
-                  <h3 className="f-archivo font-black mb-3">Productos</h3>
-                  {result.items.map((it, i) => (
-                    <div key={i} className="flex justify-between text-sm py-1">
-                      <span>{it.name} · {it.size} × {it.qty}</span>
-                      <span className="f-archivo font-bold">{fmt(it.price * it.qty)}</span>
-                    </div>
-                  ))}
-                  <div className="flex justify-between pt-3 mt-3 border-t" style={{ borderColor: '#E5E5E0' }}>
-                    <span className="f-archivo font-black">Total</span>
-                    <span className="f-archivo font-black">{fmt(result.total)}</span>
-                  </div>
-                </div>
-                <div className="bg-white border p-6" style={{ borderColor: '#E5E5E0' }}>
-                  <h3 className="f-archivo font-black mb-3">Dirección</h3>
-                  <p className="text-sm">{result.address}</p>
-                  <div className="mt-3 pt-3 border-t text-sm flex items-center gap-2" style={{ borderColor: '#E5E5E0', color: C.muted }}>
-                    <Mail size={14} style={{ color: C.orange }} /> Notificaciones a {result.email}
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
-        </div>
-      </section>
-    </main>
-  );
-};
-
 // ============================================================
 // MAISON / NOSOTROS
 // ============================================================
@@ -2518,90 +2818,6 @@ const Maison = () => (
 );
 
 // ============================================================
-// ADMIN
-// ============================================================
-const Admin = () => {
-  const [orders, setOrders] = useState([
-    { num: 'NI-2026-0847', client: 'María Restrepo', total: 221000, status: 'En tránsito', date: '12 may', city: 'Bogotá' },
-    { num: 'NI-2026-0846', client: 'Andrés Vega', total: 165000, status: 'Preparando', date: '12 may', city: 'Medellín' },
-    { num: 'NI-2026-0845', client: 'Camila Soto', total: 88000, status: 'Confirmado', date: '11 may', city: 'Cali' },
-    { num: 'NI-2026-0844', client: 'Daniel Ortiz', total: 320000, status: 'Entregado', date: '10 may', city: 'Bogotá' },
-    { num: 'NI-2026-0843', client: 'Laura Jiménez', total: 145000, status: 'Entregado', date: '10 may', city: 'Bucaramanga' },
-  ]);
-  
-  const statuses = ['Confirmado', 'Pago verificado', 'Preparando', 'Enviado', 'En tránsito', 'Entregado', 'Cancelado'];
-  
-  return (
-    <main className="bg-white min-h-screen f-dm">
-      <section className="py-8 border-b" style={{ background: C.navy, borderColor: '#E5E5E0' }}>
-        <div className="max-w-[1400px] mx-auto px-4 lg:px-8 text-white">
-          <div className="f-mono mb-2" style={{ color: C.orange }}>VISTA INTERNA · NOVA IMPORT</div>
-          <h1 className="f-archivo font-black text-3xl">Panel de pedidos</h1>
-          <p className="text-white/70 mt-2 max-w-2xl">Vista demo. En producción Shopify Admin maneja esto nativamente y los correos se disparan solos en cada cambio de estado.</p>
-        </div>
-      </section>
-      
-      <section className="py-8">
-        <div className="max-w-[1400px] mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
-            {[
-              { label: 'Pedidos hoy', val: '5' },
-              { label: 'Ingresos hoy', val: fmt(939000) },
-              { label: 'En tránsito', val: '12' },
-              { label: 'Ticket promedio', val: fmt(187800) },
-            ].map((k, i) => (
-              <div key={i} className="bg-white border p-4" style={{ borderColor: '#E5E5E0' }}>
-                <div className="f-archivo text-xs font-bold tracking-wider" style={{ color: C.muted }}>{k.label.toUpperCase()}</div>
-                <div className="f-archivo font-black text-2xl mt-1">{k.val}</div>
-              </div>
-            ))}
-          </div>
-          
-          <div className="bg-white border overflow-x-auto" style={{ borderColor: '#E5E5E0' }}>
-            <table className="w-full">
-              <thead className="border-b" style={{ borderColor: '#E5E5E0', background: C.cream }}>
-                <tr className="text-left">
-                  {['Pedido', 'Cliente', 'Ciudad', 'Fecha', 'Total', 'Estado', 'Actualizar'].map(h => (
-                    <th key={h} className="f-archivo text-xs font-bold tracking-wider px-5 py-3" style={{ color: C.muted }}>{h.toUpperCase()}</th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {orders.map(o => (
-                  <tr key={o.num} className="border-b hover:bg-stone-50" style={{ borderColor: '#F0EDE6' }}>
-                    <td className="px-5 py-3 f-archivo font-bold text-sm">{o.num}</td>
-                    <td className="px-5 py-3 text-sm">{o.client}</td>
-                    <td className="px-5 py-3 text-sm" style={{ color: C.muted }}>{o.city}</td>
-                    <td className="px-5 py-3 text-sm" style={{ color: C.muted }}>{o.date}</td>
-                    <td className="px-5 py-3 f-archivo font-bold text-sm">{fmt(o.total)}</td>
-                    <td className="px-5 py-3 text-sm">
-                      <span className="f-archivo text-xs font-bold px-2.5 py-1" style={{
-                        background: o.status === 'Entregado' ? '#D1FAE5' : o.status === 'En tránsito' ? '#FED7AA' : o.status === 'Cancelado' ? '#FEE2E2' : '#E0E7FF',
-                        color: o.status === 'Entregado' ? '#065F46' : o.status === 'En tránsito' ? '#9A3412' : o.status === 'Cancelado' ? '#991B1B' : '#3730A3',
-                      }}>{o.status.toUpperCase()}</span>
-                    </td>
-                    <td className="px-5 py-3">
-                      <select
-                        value={o.status}
-                        onChange={(e) => setOrders(orders.map(x => x.num === o.num ? { ...x, status: e.target.value } : x))}
-                        className="border text-sm px-2 py-1 bg-white"
-                        style={{ borderColor: '#D5D5D0' }}
-                      >
-                        {statuses.map(s => <option key={s}>{s}</option>)}
-                      </select>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-    </main>
-  );
-};
-
-// ============================================================
 // FOOTER
 // ============================================================
 const Footer = ({ onNavigate }) => (
@@ -2619,9 +2835,15 @@ const Footer = ({ onNavigate }) => (
           </div>
           <p className="text-sm">Importadora de productos seleccionados, perfumería y tendencias con calidad garantizada.</p>
           <div className="flex gap-3">
-            <Instagram size={20} className="hover:text-white cursor-pointer" />
-            <Facebook size={20} className="hover:text-white cursor-pointer" />
-            <MessageCircle size={20} className="hover:text-white cursor-pointer" />
+            <a href="https://www.instagram.com/nova.import_sas/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <Instagram size={20} className="hover:text-white cursor-pointer" />
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61551260687550" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <Facebook size={20} className="hover:text-white cursor-pointer" />
+            </a>
+            <a href="https://wa.me/573173641851" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <MessageCircle size={20} className="hover:text-white cursor-pointer" />
+            </a>
           </div>
         </div>
         
@@ -2641,12 +2863,34 @@ const Footer = ({ onNavigate }) => (
         <div>
           <div className="f-archivo font-bold text-white text-sm mb-3 tracking-wider">AYUDA</div>
           <ul className="space-y-2 text-sm">
-            <li><button onClick={() => onNavigate('track')} className="hover:text-white">Seguimiento de pedido</button></li>
-            <li>Envíos y entregas</li>
-            <li>Cambios y devoluciones</li>
-            <li>Preguntas frecuentes</li>
-            <li className="flex items-center gap-1.5"><MessageCircle size={12} /> WhatsApp · +57 317 364 1851</li>
-            <li className="flex items-center gap-1.5"><Mail size={12} /> novaimportaciones190@gmail.com</li>
+            <li>
+              <a href={`https://wa.me/573173641851?text=${encodeURIComponent('Hola Nova Import, quiero hacer seguimiento de mi pedido.')}`} target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                Seguimiento de pedido
+              </a>
+            </li>
+            <li>
+              <a href={`https://wa.me/573173641851?text=${encodeURIComponent('Hola, necesito información sobre envíos y entregas.')}`} target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                Envíos y entregas
+              </a>
+            </li>
+            <li>
+              <a href={`https://wa.me/573173641851?text=${encodeURIComponent('Hola, quiero hacer un cambio o devolución.')}`} target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                Cambios y devoluciones
+              </a>
+            </li>
+            <li>
+              <a href={`https://wa.me/573173641851?text=${encodeURIComponent('Hola Nova Import, tengo una pregunta.')}`} target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                Atención al cliente
+              </a>
+            </li>
+            <li className="flex items-center gap-1.5">
+              <MessageCircle size={12} />
+              <a href="https://wa.me/573173641851" target="_blank" rel="noopener noreferrer" className="hover:text-white">+57 317 364 1851</a>
+            </li>
+            <li className="flex items-center gap-1.5">
+              <Mail size={12} />
+              <a href="mailto:novaimportaciones190@gmail.com" className="hover:text-white">novaimportaciones190@gmail.com</a>
+            </li>
           </ul>
         </div>
         
@@ -2665,7 +2909,7 @@ const Footer = ({ onNavigate }) => (
       <div className="pt-6 border-t flex flex-col md:flex-row gap-4 justify-between text-xs" style={{ borderColor: '#1A3055' }}>
         <div>© 2026 Nova Import S.A.S. · NIT 52.960.928-7 · Bogotá D.C., Colombia</div>
         <div className="flex gap-6 flex-wrap items-center f-archivo font-medium">
-          <span>WOMPI</span><span>BOLD</span><span>PAYU</span><span>ADDI</span><span>SERVIENTREGA</span>
+          <span>NEQUI</span><span>BANCOLOMBIA</span><span>ADDI</span><span>CONTRAENTREGA</span><span>SERVIENTREGA</span>
         </div>
       </div>
     </div>
@@ -2697,30 +2941,39 @@ export default function App() {
   const [selectedId, setSelectedId] = useState(null);
   const [cart, setCart] = useState([]);
   const [cartOpen, setCartOpen] = useState(false);
-  const [cookies, setCookies] = useState(true);
+  const [cookies, setCookies] = useState(() => {
+    try {
+      return typeof window !== 'undefined' && !window.localStorage.getItem('novaimport_cookies_dismissed');
+    } catch (e) { return true; }
+  });
+  const dismissCookies = () => {
+    try { window.localStorage.setItem('novaimport_cookies_dismissed', '1'); } catch (e) {}
+    setCookies(false);
+  };
+  const [searchQuery, setSearchQuery] = useState('');
   
   useEffect(() => {
-    (async () => {
-      try {
-        if (window.storage?.get) {
-          const s = await window.storage.get('cart_nova');
-          if (s?.value) setCart(JSON.parse(s.value));
-        }
-      } catch {}
-    })();
+    try {
+      const s = window.localStorage.getItem('cart_nova');
+      if (s) setCart(JSON.parse(s));
+    } catch (e) {}
   }, []);
-  
+
   useEffect(() => {
-    (async () => {
-      try {
-        if (window.storage?.set) await window.storage.set('cart_nova', JSON.stringify(cart));
-      } catch {}
-    })();
+    try { window.localStorage.setItem('cart_nova', JSON.stringify(cart)); } catch (e) {}
   }, [cart]);
   
   const navigate = (v) => {
+    if (typeof v === 'object' && v !== null && v.view === 'search') {
+      setSearchQuery(v.q || '');
+      setView('search');
+      setSelectedId(null);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
     setView(v);
     if (v !== 'product') setSelectedId(null);
+    if (v !== 'search') setSearchQuery('');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
   
@@ -2749,11 +3002,7 @@ export default function App() {
   
   const removeFromCart = (i) => setCart(cart.filter((_, j) => j !== i));
   
-  const checkout = () => {
-    alert('🔒 Redirigiendo a Wompi…\n\nEn producción este botón genera un permalink de Shopify con los productos y abre el checkout de Wompi para completar el pago. Al confirmarse, Shopify crea el pedido NI-2026-XXXX y dispara el primer correo transaccional al cliente.');
-  };
-  
-  const WA_NUMBER = '573173641851';
+const WA_NUMBER = '573173641851';
   
   const openWhatsApp = (msg) => {
     const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
@@ -2787,26 +3036,15 @@ export default function App() {
     if (view === 'catalog-bestsellers') return <Catalog initialFilter={{ bestseller: true }} title="Los más vendidos" onSelectProduct={selectProduct} />;
     if (view === 'product' && product) return <ProductDetail product={product} onBack={() => navigate('catalog')} onAddToCart={addToCart} onWhatsAppBuy={productWhatsApp} onSelectProduct={selectProduct} />;
     if (view === 'wishlist') return <Wishlist onSelectProduct={selectProduct} onNavigate={navigate} />;
-    if (view === 'track') return <TrackOrder />;
+    if (view === 'search') return <SearchResults query={searchQuery} onSelectProduct={selectProduct} onNavigate={navigate} />;
     if (view === 'maison') return <Maison />;
-    if (view === 'admin') return <Admin />;
-    if (view === 'account') return (
-      <main className="bg-white min-h-screen flex items-center justify-center p-6 f-dm">
-        <div className="text-center max-w-md space-y-5">
-          <User size={36} style={{ color: C.orange }} className="mx-auto" strokeWidth={1.5} />
-          <h1 className="f-archivo font-black text-3xl">Tu cuenta</h1>
-          <p style={{ color: C.muted }}>Tu historial de pedidos se gestiona vía Shopify Customer Account. Si solo quieres rastrear un pedido, usa el seguimiento.</p>
-          <button onClick={() => navigate('track')} className="text-white px-6 py-3 f-archivo font-bold text-sm" style={{ background: C.navy }}>SEGUIR UN PEDIDO</button>
-        </div>
-      </main>
-    );
     return <Home onNavigate={navigate} onSelectProduct={selectProduct} />;
   };
   
   return (
     <div className="f-dm" style={{ background: 'white' }}>
       <Fonts />
-      <Header onNavigate={navigate} currentView={view} cartCount={cartCount} onCartOpen={() => setCartOpen(true)} />
+      <Header onNavigate={navigate} currentView={view} cartCount={cartCount} onCartOpen={() => setCartOpen(true)} searchQuery={searchQuery} />
       <div className="fade" key={view + (selectedId || '')}>
         {renderView()}
       </div>
@@ -2817,10 +3055,9 @@ export default function App() {
         cart={cart}
         onUpdateQty={updateQty}
         onRemove={removeFromCart}
-        onCheckout={checkout}
         onWhatsApp={cartWhatsApp}
       />
-      {cookies && <CookieBanner onClose={() => setCookies(false)} />}
+      {cookies && <CookieBanner onClose={dismissCookies} />}
       
       {/* Floating WhatsApp button */}
       <a
@@ -2833,13 +3070,6 @@ export default function App() {
         <MessageCircle size={26} strokeWidth={2} />
       </a>
       
-      {/* Admin shortcut */}
-      <button
-        onClick={() => navigate('admin')}
-        className="fixed bottom-24 left-6 z-30 bg-stone-900 text-white px-3 py-2 text-[10px] f-archivo font-bold tracking-wider opacity-60 hover:opacity-100"
-      >
-        ADMIN DEMO ↗
-      </button>
     </div>
   );
 }
