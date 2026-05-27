@@ -2943,7 +2943,7 @@ const buildSearchTerm = (product) => {
   return encodeURIComponent(base);
 };
 const getMercadoLibreUrl = (product) => product.mercadoLibreUrl || `${MERCADOLIBRE_BASE}/${buildSearchTerm(product)}`;
-const getShopifyUrl = (product) => `${SHOPIFY_BASE}/search?q=${buildSearchTerm(product)}`;
+const getShopifyUrl = (product) => `${SHOPIFY_BASE}/products/${product.id}`;
 
 // ============================================================
 // PRODUCT IMAGE — Photographic style on white
